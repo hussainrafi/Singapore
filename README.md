@@ -1,2 +1,5 @@
 # Bookingsystem
-A booking system for a fictional travel agency
+Et booking system til at booke haller/lokaler
+
+
+
