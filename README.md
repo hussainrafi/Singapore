@@ -1,12 +1,19 @@
-## Kravspecifikationer
+## Idræts-booking-system
+
+### Beskrivelse
+Dette er et bookingsystem, som er henvendt til idrætsforeninger, 
+der ønsker at få et overblik over, hvem der har krav på de forskellige idrætfaciliteter.  
 
 
-
-### Aktører
+### Kravspecifikationer
+#### Aktører
 
 - Undervisere
 - Elever
 
-Undervisere
+#### Undervisere
 - Skal kunne oprette et nyt hold
 
+#### Elever
+
+#### Funktioner
