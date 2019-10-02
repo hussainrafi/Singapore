@@ -8,5 +8,5 @@
 - Elever
 
 Undervisere
-- 
+- Skal kunne oprette et nyt hold
 
