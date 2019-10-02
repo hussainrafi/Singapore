@@ -1,5 +1,12 @@
-# Bookingsystem
-Et booking system til at booke haller/lokaler
+## Kravspecifikationer
 
 
+
+### Aktører
+
+- Undervisere
+- Elever
+
+Undervisere
+- 
 
