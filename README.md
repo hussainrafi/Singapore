@@ -3,7 +3,8 @@
 ### Beskrivelse
 Dette er et bookingsystem, som er henvendt til idrætsforeninger, 
 der ønsker at få et overblik over, hvilke hold der har krav på de forskellige idrætsfaciliteter.
-Programmet gør det muligt for en træner, at 
+Programmet gør det muligt for en træner, at oprette en træningsssession og tilknytte et hold.
+Et hold består af elever, og den enkelte elev kan være tilknyttet et eller flere hold.
 
 ### Kravspecifikationer
 #### Aktører
@@ -20,7 +21,6 @@ Programmet gør det muligt for en træner, at
 - Skal kunne se ledige lokaler med plads til sit hold
 - Skal være tilknyttet en sportsgren og et tilhørende niveau
 - Skal kunne tilføje og slette en elev fra en sportsgren
-
 
 #### Elever
 - Skal have tilknyttet et navn og et efternavn
