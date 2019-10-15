@@ -21,7 +21,7 @@ var objPeople = [
         sportLevel: "Fodbold5"
     },
     {
-        username: "phillip",
+        username: "philip",
         password: "burleigh123",
         sportLevel: "Rundbold2"
     },
@@ -44,9 +44,9 @@ function login(){
     var username = document.getElementById("username").value
     var password = document.getElementById("password").value
 
-    //for loop som køre alle user objekter igennem og ser om username og password findes og matcher
+    //for loop som kører alle user objekter igennem og ser om username og password findes og matcher
     for(i = 0; i< objPeople.length; i++){
-        if(username == objPeople[i].username && password == objPeople[i].password){
+        if(username.toLocaleLowerCase() == objPeople[i].username && password == objPeople[i].password){
             console.log(username + " er logget ind" )
             return
         }
