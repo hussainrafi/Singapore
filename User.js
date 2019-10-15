@@ -46,8 +46,8 @@ function login(){
 
     //for loop som kører alle user objekter igennem og ser om username og password findes og matcher
     for(i = 0; i< objPeople.length; i++){
-        if(username.toLocaleLowerCase() == objPeople[i].username && password == objPeople[i].password){
-            console.log(username + " er logget ind" )
+        if(username.toLocaleLowerCase().trim() == objPeople[i].username && password == objPeople[i].password){
+            console.log(username.trim() + " er logget ind" )
             return
         }
     }
