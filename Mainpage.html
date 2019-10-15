@@ -1,12 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>hejsa Philip !!!!</title>
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="User.js"></script>
 </head>
 <body>
+<h1 style=color:white; align="center";">BOOKINGSYSTEM</h1>
+<div class="login-page">
+    <div class="form">
+        <form class="register-form">
+            <input type="text" placeholder="E-mail"/>
+            <input type="text" placeholder="Username"/>
+            <input type="text" placeholder="Password"/>
+            <input type="text" placeholder="Repeat Password"/>
+            <button>Opret</button>
+            <p class="message">Allerede registreret? <a href="#">Login</a></p>
+        </form>
+        <form class="login-form">
+            <input id= "username" type="text" placeholder="Username"/>
+            <input id="password" type="Password" placeholder="Password"/>
+            <button type="button" onclick="login()">Login</button>
+            <p class="message">Ikke registreret? <a href="#">Opret bruger<a/></p>
+        </form>
+    </div>
+</div>
 
-<p> Hej :) </p>
-<p> Hej </p>
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+
+<script>
+    $('.message a').click(function(){
+        $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+    });
+</script>
 </body>
 </html>
