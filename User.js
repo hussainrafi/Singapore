@@ -16,10 +16,8 @@ var user2 = new User("Philip", "Burleigh", "philip", "burleigh123", "Rundbold2",
 var user3 = new User("Andreas","Krogh", "andreas","krogh123", "Bowling2", "Admin");
 var user4 = new User("Caroline", "Lindegren", "caroline", "lindegren123","Tennis3", "student");
 
-var objPeople = [];
-objPeople.push(user1, user2, user3, user4);
-console.log(objPeople)
-
+var users = [];
+users.push(user1, user2, user3, user4);
 
 //Funktion til login
 function login(){
@@ -28,10 +26,10 @@ function login(){
     var password = document.getElementById("password").value
 
     //for loop som kører alle user objekter igennem og ser om username og password findes og matcher
-    for(i = 0; i< objPeople.length; i++){
-        if(username.toLocaleLowerCase().trim() == objPeople[i].username && password == objPeople[i].password){
+    for(i = 0; i< users.length; i++){
+        if(username.toLocaleLowerCase().trim() == users[i].username && password == users[i].password){
             console.log(username.trim() + " er logget ind" )
-            if (objPeople[i].userType == "Admin"){
+            if (users[i].userType == "Admin"){
                 window.location.replace("AdminIndex.html");
             } else {
                     window.location.replace("StudentIndex.html");
@@ -52,3 +50,10 @@ class Facility {
 }
 
 var facility1 = new Facility("Springhal", "40", ["Springgymnastik", "Dans", "Håndbold"])
+
+var facilities = [];
+facilities.push(facility1)
+
+function addSession(facilities, users){
+
+};
