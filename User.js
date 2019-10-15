@@ -41,5 +41,5 @@ function login(){
         }
     }
     //Fejlbesked hvis username og password ikke matcher
-    console.log("Brugernavn eller adgangskode findes ikke")
+    alert("Brugernavn eller adgangskode findes ikke");
 }

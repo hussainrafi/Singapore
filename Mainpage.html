@@ -19,7 +19,17 @@
         <form class="login-form">
             <input id= "username" type="text" placeholder="Username"/>
             <input id="password" type="Password" placeholder="Password"/>
-            <button type="button" onclick="login()">Login</button>
+            <button type="button" id="loginButton" onclick="login()">Login</button>
+            <!-- Funktion som udløser button funktion med 'enter' key -->
+            <script>
+                var input = document.getElementById("password");
+                input.addEventListener("keyup", function(event){
+                    if (event.key === "Enter") {
+                        event.preventDefault();
+                        document.getElementById("loginButton").click();
+                    }
+                });
+            </script>
             <p class="message">Ikke registreret? <a href="#">Opret bruger<a/></p>
         </form>
     </div>
