@@ -10,41 +10,16 @@ class User {
      }
 }
 
-var user1 = new User("Hussain", "Rafi", "hussain", 1234, "fodbold5", "Admin");
-var user2 = new User("Peter", "Petersen", "peter123", 4321, "Rundbold2", "Student");
+//Dummy data som objekter der bliver pushet til et empty array
+var user1 = new User("Hussain", "Rafi", "hussain", "rafi123", "fodbold5", "Admin");
+var user2 = new User("Philip", "Burleigh", "philip", "burleigh123", "Rundbold2", "Student");
+var user3 = new User("Andreas","Krogh", "andreas","krogh123", "Bowling2", "Admin");
+var user4 = new User("Caroline", "Lindegren", "caroline", "lindegren123","Tennis3", "student");
 
-var objPeople = []
-objPeople.push(user1, user2)
+var objPeople = [];
+objPeople.push(user1, user2, user3, user4);
 console.log(objPeople)
 
-//Dummy data for users som bliver defineret i en array
-
-/*var objPeople = [
-    {
-        username: "hussain",
-        password: "rafi123",
-        sportLevel: "Fodbold5",
-        userType: "Administrator"
-    },
-    {
-        username: "philip",
-        password: "burleigh123",
-        sportLevel: "Rundbold2",
-        userType: "Student"
-    },
-    {
-        username: "andreas",
-        password: "krogh123",
-        sportLevel: "Bowling2",
-        userType: "Student"
-    },
-    {
-        username: "caroline",
-        password: "lindegren123",
-        sportLevel: "Tennis3",
-        userType: "Student"
-    }
-]*/
 
 //Funktion til login
 
