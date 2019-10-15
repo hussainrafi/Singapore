@@ -19,21 +19,25 @@ var objPeople = [
         username: "hussain",
         password: "rafi123",
         sportLevel: "Fodbold5"
+        userType: "Administrator"
     },
     {
         username: "philip",
         password: "burleigh123",
         sportLevel: "Rundbold2"
+        userType: "Student"
     },
     {
         username: "andreas",
         password: "krogh123",
         sportLevel: "Bowling2"
+        userType: "Student"
     },
     {
         username: "caroline",
         password: "lindegren123",
         sportLevel: "Tennis3"
+        userType: "Student"
     }
 ]
 
