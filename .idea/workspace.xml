@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4ed24da8-d3bc-4287-92ba-ee6362c5b2c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/AdminIndex.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/User.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +34,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript&#10;HTML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -82,6 +83,11 @@
       <workItem from="1570621169295" duration="11116000" />
       <workItem from="1570794930654" duration="424000" />
       <workItem from="1571119938004" duration="1811000" />
+      <workItem from="1571135880751" duration="20000" />
+      <workItem from="1571136299404" duration="207000" />
+      <workItem from="1571157108281" duration="99000" />
+      <workItem from="1571157225191" duration="34000" />
+      <workItem from="1571159061491" duration="952000" />
     </task>
     <servers />
   </component>

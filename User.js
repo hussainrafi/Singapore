@@ -11,10 +11,10 @@ class User {
 }
 
 //Dummy user data, som objekter der bliver pushet til et empty array
-var user1 = new User("Hussain", "Rafi", "hussain", "rafi123", "fodbold5", "Admin");
-var user2 = new User("Philip", "Burleigh", "philip", "burleigh123", "Rundbold2", "Student");
-var user3 = new User("Andreas","Krogh", "andreas","krogh123", "Bowling2", "Admin");
-var user4 = new User("Caroline", "Lindegren", "caroline", "lindegren123","Tennis3", "student");
+var user1 = new User("Hussain", "Rafi", "hussain", "rafi123", "Fodbold", "Admin");
+var user2 = new User("Philip", "Burleigh", "philip", "burleigh123", "Rundbold", "Student");
+var user3 = new User("Andreas","Krogh", "andreas","krogh123", "Bowling", "Admin");
+var user4 = new User("Caroline", "Lindegren", "caroline", "lindegren123","Tennis", "student");
 
 var users = [];
 users.push(user1, user2, user3, user4);
