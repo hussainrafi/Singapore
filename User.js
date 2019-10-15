@@ -18,25 +18,25 @@ var objPeople = [
     {
         username: "hussain",
         password: "rafi123",
-        sportLevel: "Fodbold5"
+        sportLevel: "Fodbold5",
         userType: "Administrator"
     },
     {
         username: "philip",
         password: "burleigh123",
-        sportLevel: "Rundbold2"
+        sportLevel: "Rundbold2",
         userType: "Student"
     },
     {
         username: "andreas",
         password: "krogh123",
-        sportLevel: "Bowling2"
+        sportLevel: "Bowling2",
         userType: "Student"
     },
     {
         username: "caroline",
         password: "lindegren123",
-        sportLevel: "Tennis3"
+        sportLevel: "Tennis3",
         userType: "Student"
     }
 ]
@@ -52,7 +52,12 @@ function login(){
     for(i = 0; i< objPeople.length; i++){
         if(username.toLocaleLowerCase().trim() == objPeople[i].username && password == objPeople[i].password){
             console.log(username.trim() + " er logget ind" )
-            return
+            if (objPeople[i].userType == "Administrator"){
+                window.location.replace("AdminIndex.html");
+            } else {
+                    window.location.replace("StudentIndex.html");
+                 }
+        return
         }
     }
     //Fejlbesked hvis username og password ikke matcher
