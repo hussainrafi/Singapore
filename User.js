@@ -1,20 +1,25 @@
 //Klasser
-class user {
-    /* constructor(firstName, lastName, username, password, sportLevel){
+class User {
+    constructor(firstName, lastName, username, password, sportLevel, userType){
          this.firstName = firstName;
          this.lastName = lastName;
          this.username = username;
          this.password = password;
          this.sportLevel = sportLevel;
-     }*/
+         this.userType = userType;
+     }
 }
-//user1 = new user(Hussain, Rafi, hussain, 1234, fodbold5);
-//user2 = new user(Peter, Petersen, peter123, 4321, Rundbold2);
 
+var user1 = new User("Hussain", "Rafi", "hussain", 1234, "fodbold5", "Admin");
+var user2 = new User("Peter", "Petersen", "peter123", 4321, "Rundbold2", "Student");
+
+var objPeople = []
+objPeople.push(user1, user2)
+console.log(objPeople)
 
 //Dummy data for users som bliver defineret i en array
 
-var objPeople = [
+/*var objPeople = [
     {
         username: "hussain",
         password: "rafi123",
@@ -39,7 +44,7 @@ var objPeople = [
         sportLevel: "Tennis3",
         userType: "Student"
     }
-]
+]*/
 
 //Funktion til login
 
@@ -52,7 +57,7 @@ function login(){
     for(i = 0; i< objPeople.length; i++){
         if(username.toLocaleLowerCase().trim() == objPeople[i].username && password == objPeople[i].password){
             console.log(username.trim() + " er logget ind" )
-            if (objPeople[i].userType == "Administrator"){
+            if (objPeople[i].userType == "Admin"){
                 window.location.replace("AdminIndex.html");
             } else {
                     window.location.replace("StudentIndex.html");
