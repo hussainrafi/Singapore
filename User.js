@@ -1,4 +1,4 @@
-//Klasser
+// User klasse
 class User {
     constructor(firstName, lastName, username, password, sportLevel, userType){
          this.firstName = firstName;
@@ -10,7 +10,7 @@ class User {
      }
 }
 
-//Dummy data som objekter der bliver pushet til et empty array
+//Dummy user data, som objekter der bliver pushet til et empty array
 var user1 = new User("Hussain", "Rafi", "hussain", "rafi123", "fodbold5", "Admin");
 var user2 = new User("Philip", "Burleigh", "philip", "burleigh123", "Rundbold2", "Student");
 var user3 = new User("Andreas","Krogh", "andreas","krogh123", "Bowling2", "Admin");
@@ -22,7 +22,6 @@ console.log(objPeople)
 
 
 //Funktion til login
-
 function login(){
     //Starter med at hente input fra HTML form
     var username = document.getElementById("username").value
@@ -43,3 +42,13 @@ function login(){
     //Fejlbesked hvis username og password ikke matcher
     alert("Brugernavn eller adgangskode findes ikke");
 }
+
+class Facility {
+    constructor (name, capacity, suitableSports){
+      this.name = facilityName;
+      this.capacity = capacity;
+      this.suitableSports = suitableSports;
+    }
+}
+
+var facility1 = new Facility("Springhal", "40", ["Springgymnastik", "Dans", "Håndbold"])
