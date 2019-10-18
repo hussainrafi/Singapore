@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css"  href="adminIndex.css">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+    <header>
+        <img class="logo" src="pictures/logo1.png" alt="logo" id="logo">
+        <nav>
+            <ul class="navbar">
+                <li><a href="#">Hjem</a> </li>
+                <li><a href="#">Opret sessions</a> </li>
+                <li><a href="#">Faciliteter</a> </li>
+                <li><a href="#">Om os</a> </li>
+            </ul>
+        </nav>
+        <a class="logout" href="#"><button>Log ud</button></a>
+    </header>
 
-<h1> Admin Index </h1>
-<h2> Ny Træningssession:</h2>
-<form>
-    Vælg sportsgren:
-    <select type="text" id="sportType">
-        <option selected disabled> -Sportsgren- </option>
-        <option value="Fodbold">Fodbold</option>
-        <option value="Tennis">Tennis</option>
-        <option value="Springgymnastik">Springgymnastik</option>
-        <option value="Svømning">Svømning</option>
-        <option value="Håndbold">Håndbold</option>
-    </select>
+    <h2> Ny Elev: </h2>
+    Bruger Type:
+    <!-- Opretter ny bruger -->
+    <form class="newUser">
+        <br/>
+        <input type="radio" class="userType" name="userType" value="Coach"/>Coach
+        <br/>
+        <input type="radio" class="userType" name="userType" value="Student"/>Elev
+        <br/>
+        <input id= "newFirstName" type="text" placeholder="Fornavn"/>
+        <br/>
+        <input id= "newLastName" type="text" placeholder="Efternavn"/>
+        <br/>
+        <input id= "newUsername" type="text" placeholder="Username"/>
+        <br/>
+        <input id="newPassword" type="Password" placeholder="Password"/>
 
-</form>
+        <br/>
+        <button type="button" id="loginButton" onclick="newUser()">Opret</button>
 
 </body>
 </html>

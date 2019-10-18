@@ -1,20 +1,34 @@
 // User klasse
 class User {
-    constructor(firstName, lastName, username, password, sportLevel, userType){
+    constructor(firstName, lastName, username, password, sportLevel){
          this.firstName = firstName;
          this.lastName = lastName;
          this.username = username;
          this.password = password;
          this.sportLevel = sportLevel;
-         this.userType = userType;
      }
 }
 
+class Coach extends User{
+    constructor(firstName, lastName, username, password, sportLevel, coachID){
+        super(firstName, lastName, username, password, sportLevel);
+        this.coachID = coachID;
+    }
+};
+
+class Student extends User{
+    constructor(firstName, lastName, username, password, sportLevel, studentID){
+      super(firstName, lastName, username, password, sportLevel);
+      this.studentID = studentID;
+    }
+};
+
+
 //Dummy user data, som objekter der bliver pushet til et empty array
-var user1 = new User("Hussain", "Rafi", "hussain", "rafi123", "Fodbold", "Admin");
-var user2 = new User("Philip", "Burleigh", "philip", "burleigh123", "Rundbold", "Student");
-var user3 = new User("Andreas","Krogh", "andreas","krogh123", "Bowling", "Admin");
-var user4 = new User("Caroline", "Lindegren", "caroline", "lindegren123","Tennis", "student");
+var user1 = new Coach("Hussain", "Rafi", "hussain", "rafi123", "Fodbold", 1);
+var user2 = new Student("Philip", "Burleigh", "philip", "burleigh123", "Rundbold", 1);
+var user3 = new Student("Andreas","Krogh", "andreas","krogh123", "Bowling", 2);
+var user4 = new Student("Caroline", "Lindegren", "caroline", "lindegren123","Tennis", 3);
 
 var users = [];
 users.push(user1, user2, user3, user4);
@@ -29,7 +43,7 @@ function login(){
     for(i = 0; i< users.length; i++){
         if(username.toLocaleLowerCase().trim() == users[i].username && password == users[i].password){
             console.log(username.trim() + " er logget ind" )
-            if (users[i].userType == "Admin"){
+            if (users[i].coachID > 0){
                 window.location.replace("AdminIndex.html");
             } else {
                     window.location.replace("StudentIndex.html");
@@ -40,20 +54,3 @@ function login(){
     //Fejlbesked hvis username og password ikke matcher
     alert("Brugernavn eller adgangskode findes ikke");
 }
-
-class Facility {
-    constructor (name, capacity, suitableSports){
-      this.name = facilityName;
-      this.capacity = capacity;
-      this.suitableSports = suitableSports;
-    }
-}
-
-var facility1 = new Facility("Springhal", "40", ["Springgymnastik", "Dans", "Håndbold"])
-
-var facilities = [];
-facilities.push(facility1)
-
-function addSession(facilities, users){
-
-};
