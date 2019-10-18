@@ -8,41 +8,23 @@
 <h1 style=color:white; align="center";"><!--indsæt titel--></h1>
 <img src="pictures/logo1.png" alt="logo" display= "block"; width="20%"; height="40%"; class="center"; id="logo";>
 <div class="login-page">
-    <div class="form">
-        <form class="register-form">
-            <input type="text" placeholder="E-mail"/>
-            <input type="text" placeholder="Username"/>
-            <input type="text" placeholder="Password"/>
-            <input type="text" placeholder="Repeat Password"/>
-            <button>Opret</button>
-            <p class="message">Allerede registreret? <a href="#">Login</a></p>
-        </form>
-
-        <!-- Login funktion  -->
-        <form class="login-form">
-            <input id= "username" type="text" placeholder="Username"/>
-            <input id="password" type="Password" placeholder="Password"/>
-            <button type="button" id="loginButton" onclick="login()">Login</button>
-            <!-- Funktion som udløser button funktion med 'enter' key -->
-            <script>
-                var input = document.getElementById("password");
-                input.addEventListener("keyup", function(event){
-                    if (event.key === "Enter") {
-                        event.preventDefault();
-                        document.getElementById("loginButton").click();
-                    }
-                });
-            </script>
-            <p class="message">Ikke registreret? <a href="#">Opret bruger<a/></p>
+    <!-- Login funktion  -->
+    <form class="form">
+        <input id= "username" type="text" placeholder="Username"/>
+        <input id="password" type="Password" placeholder="Password"/>
+        <button type="button" id="loginButton" onclick="login()">Login</button>
+        <!-- Funktion som udløser button funktion med 'enter' key -->
+        <script>
+            var input = document.getElementById("password");
+            input.addEventListener("keyup", function(event){
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    document.getElementById("loginButton").click();
+                }
+            });
+        </script>
         </form>
     </div>
 </div>
-<!-- script for login animationer -->
-<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
-<script>
-    $('.message a').click(function(){
-        $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
-    });
-</script>
 </body>
 </html>
