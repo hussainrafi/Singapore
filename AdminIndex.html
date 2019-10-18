@@ -8,6 +8,7 @@
 <body>
     <header>
         <img class="logo" src="pictures/logo1.png" alt="logo" id="logo">
+        <script src="User.js"></script>
         <nav>
             <ul class="navbar">
                 <li><a href="#">Hjem</a> </li>
@@ -23,10 +24,10 @@
     Bruger Type:
     <!-- Opretter ny bruger -->
     <form class="newUser">
+        <br>
+        Check af, hvis den nye bruger skal være administrator
         <br/>
-        <input type="radio" class="userType" name="userType" value="Coach"/>Coach
-        <br/>
-        <input type="radio" class="userType" name="userType" value="Student"/>Elev
+        <input type="checkbox" class="userType" value="Coach"/>Coach
         <br/>
         <input id= "newFirstName" type="text" placeholder="Fornavn"/>
         <br/>
@@ -34,7 +35,32 @@
         <br/>
         <input id= "newUsername" type="text" placeholder="Username"/>
         <br/>
-        <input id="newPassword" type="Password" placeholder="Password"/>
+        <input id="newPassword" type="password" placeholder="Password"/ >
+        <br/>
+        Check fodbold-niveau af, hvis eleven er starter til fodbold:
+        <br/>
+        <input type="radio" class="fodboldLevel" name="fodbold" value=["fodbold", 1]/>1
+        <br/>
+        <input type="radio" class="fodboldLevel" name="fodbold" value=["fodbold", 2]/>2
+        <br/>
+        <input type="radio" class="fodboldLevel" name="fodbold" value=["fodbold", 3]/>3
+        <br/>
+        Check springgymnastik-niveau af, hvis eleven er starter til springgymnastik:
+        <br/>
+        <input type="radio" class="springLevel" name="springgymnastik" value=["springgymnastik", 1]/>1
+        <br/>
+        <input type="radio" class="springLevel" name= "springgymnastik" value=["springgymnastik", 2]/>2
+        <br/>
+        <input type="radio" class="springLevel" name="springgymnastik" value=["springgymnastik", 3]/>3
+        <br>
+        Check tennis-niveau af, hvis eleven er starter til tennis:
+        <br/>
+        <input type="radio" class="tennisLevel" name="tennis" value=["tennis", 1]/>1
+        <br/>
+        <input type="radio" class="tennisLevel" name= "tennis" value=["tennis", 2]/>2
+        <br/>
+        <input type="radio" class="tennisLevel" name="tennis" value=["tennis", 3]/>3
+
 
         <br/>
         <button type="button" id="loginButton" onclick="newUser()">Opret</button>

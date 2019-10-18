@@ -50,7 +50,35 @@ function login(){
                  }
         return
         }
-    }
+    };
     //Fejlbesked hvis username og password ikke matcher
     alert("Brugernavn eller adgangskode findes ikke");
 }
+
+//Opret ny bruger
+function newUser{
+    //Brugertype (Coach eller Student)
+    var userTypes = document.getElementsByClassName('userType');
+    var len = userTypes.length;
+    var userType = "";
+
+    var i = 0;
+    for (i=0; i<len; i++) {
+        if (userTypes[i].checked) {
+            userType = "Coach"
+        } else {
+            userType = "Student"
+        }
+    }
+
+    var firstName = document.getElementById('newFirstName').value;
+    var lastName = document.getElementById('newLastName').value;
+    var username = document.getElementById('newUsername').value;
+    var password = document.getElementById('newPassword').value;
+
+    if(userType == "Coach"){
+
+    } else {
+
+    }
+};
