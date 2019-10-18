@@ -14,36 +14,39 @@ class Coach extends User{
         super(firstName, lastName, username, password, sportLevel);
         this.coachID = coachID;
     }
-};
+}
 
 class Student extends User{
     constructor(firstName, lastName, username, password, sportLevel, studentID){
       super(firstName, lastName, username, password, sportLevel);
       this.studentID = studentID;
     }
-};
+}
 
+//Liste der opbevarer brugerne
+var userList = [];
+    //Dummy user data, som objekter der bliver pushet til et empty array
+    userList.push(new Coach("Hussain", "Rafi", "hussain", "rafi123", "Fodbold", 1));
+    userList.push(new Student("Philip", "Burleigh", "philip", "burleigh123", "Rundbold", 1));
+    userList.push(new Student("Andreas","Krogh", "andreas","krogh123", "Bowling", 2));
+    userList.push(new Student("Caroline", "Lindegren", "caroline", "lindegren123","Tennis", 3));
 
-//Dummy user data, som objekter der bliver pushet til et empty array
-var user1 = new Coach("Hussain", "Rafi", "hussain", "rafi123", "Fodbold", 1);
-var user2 = new Student("Philip", "Burleigh", "philip", "burleigh123", "Rundbold", 1);
-var user3 = new Student("Andreas","Krogh", "andreas","krogh123", "Bowling", 2);
-var user4 = new Student("Caroline", "Lindegren", "caroline", "lindegren123","Tennis", 3);
-
-var users = [];
-users.push(user1, user2, user3, user4);
+var userListString = JSON.stringify(userList);
+localStorage.setItem("User", userListString)
 
 //Funktion til login
 function login(){
     //Starter med at hente input fra HTML form
-    var username = document.getElementById("username").value
-    var password = document.getElementById("password").value
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    var storedUsersList = JSON.parse(localStorage.getItem("User"));
 
     //for loop som kører alle user objekter igennem og ser om username og password findes og matcher
-    for(i = 0; i< users.length; i++){
-        if(username.toLocaleLowerCase().trim() == users[i].username && password == users[i].password){
+    for(i = 0; i< storedUsersList.length; i++){
+        if(username.toLocaleLowerCase().trim() == storedUsersList[i].username && password == storedUsersList[i].password){
             console.log(username.trim() + " er logget ind" )
-            if (users[i].coachID > 0){
+            if (storedUsersList[i].coachID > 0){
                 window.location.replace("AdminIndex.html");
             } else {
                     window.location.replace("StudentIndex.html");
@@ -56,7 +59,7 @@ function login(){
 }
 
 //Opret ny bruger
-function newUser{
+function newUser(){
     //Brugertype (Coach eller Student)
     var userTypes = document.getElementsByClassName('userType');
     var len = userTypes.length;
@@ -77,8 +80,11 @@ function newUser{
     var password = document.getElementById('newPassword').value;
 
     if(userType == "Coach"){
+        var storedUsersList = JSON.parse(localStorage.getItem("User"));
+        var idList = storedUsersList.coachID;
 
+        console.log(idList)
     } else {
-
+        return
     }
 };
