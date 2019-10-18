@@ -5,20 +5,20 @@ class User {
          this.lastName = lastName;
          this.username = username;
          this.password = password;
-         this.sportLevel = sportLevel;
+         //this.sportLevel = sportLevel;
      }
 }
 
 class Coach extends User{
-    constructor(firstName, lastName, username, password, sportLevel, coachID){
-        super(firstName, lastName, username, password, sportLevel);
+    constructor(firstName, lastName, username, password, coachID){
+        super(firstName, lastName, username, password);
         this.coachID = coachID;
     }
 }
 
 class Student extends User{
-    constructor(firstName, lastName, username, password, sportLevel, studentID){
-      super(firstName, lastName, username, password, sportLevel);
+    constructor(firstName, lastName, username, password, studentID){
+      super(firstName, lastName, username, password);
       this.studentID = studentID;
     }
 }
@@ -26,10 +26,10 @@ class Student extends User{
 //Liste der opbevarer brugerne
 var userList = [];
     //Dummy user data, som objekter der bliver pushet til et empty array
-    userList.push(new Coach("Hussain", "Rafi", "hussain", "rafi123", "Fodbold", 1));
-    userList.push(new Student("Philip", "Burleigh", "philip", "burleigh123", "Rundbold", 1));
-    userList.push(new Student("Andreas","Krogh", "andreas","krogh123", "Bowling", 2));
-    userList.push(new Student("Caroline", "Lindegren", "caroline", "lindegren123","Tennis", 3));
+    userList.push(new Coach("Hussain", "Rafi", "hussain", "rafi123", 1));
+    userList.push(new Student("Philip", "Burleigh", "philip", "burleigh123", 1));
+    userList.push(new Student("Andreas","Krogh", "andreas","krogh123", 2));
+    userList.push(new Student("Caroline", "Lindegren", "caroline", "lindegren123", 3));
 
 var userListString = JSON.stringify(userList);
 localStorage.setItem("User", userListString)
@@ -79,11 +79,18 @@ function newUser(){
     var username = document.getElementById('newUsername').value;
     var password = document.getElementById('newPassword').value;
 
-    if(userType == "Coach"){
-        var storedUsersList = JSON.parse(localStorage.getItem("User"));
-        var idList = storedUsersList.coachID;
+    var storedUsersList = JSON.parse(localStorage.getItem("User"));
 
-        console.log(idList)
+    if(userType == "Coach"){
+        var idNumber = 1;
+        for(i = 0; i< storedUsersList.length; i++) {
+            if (storedUsersList[i].coachID >= 0) {
+                idNumber += 1
+            }
+        }
+        userList.push(new Coach(firstName, lastName, username, password, idNumber));
+        var newLocalUserListString = JSON.stringify(userList);
+        localStorage.setItem("User", newLocalUserListString)
     } else {
         return
     }
