@@ -24,15 +24,19 @@ class Student extends User{
 }
 
 //Liste der opbevarer brugerne
-var userList = [];
+if (localStorage.getItem("User") == null) {
+    var userList = [];
     //Dummy user data, som objekter der bliver pushet til et empty array
     userList.push(new Coach("Hussain", "Rafi", "hussain", "rafi123", 1));
     userList.push(new Student("Philip", "Burleigh", "philip", "burleigh123", 1));
-    userList.push(new Student("Andreas","Krogh", "andreas","krogh123", 2));
+    userList.push(new Student("Andreas", "Krogh", "andreas", "krogh123", 2));
     userList.push(new Student("Caroline", "Lindegren", "caroline", "lindegren123", 3));
 
-var userListString = JSON.stringify(userList);
-localStorage.setItem("User", userListString)
+    var userListString = JSON.stringify(userList);
+    localStorage.setItem("User", userListString);
+} else {
+    var userList = JSON.parse(localStorage.getItem("User"))
+}
 
 //Funktion til login
 function login(){
@@ -60,7 +64,7 @@ function login(){
 
 //Opret ny bruger
 function newUser(){
-    //Brugertype (Coach eller Student)
+    //Brugertype importeres (Coach eller Student)
     var userTypes = document.getElementsByClassName('userType');
     var len = userTypes.length;
     var userType = "";
@@ -92,6 +96,14 @@ function newUser(){
         var newLocalUserListString = JSON.stringify(userList);
         localStorage.setItem("User", newLocalUserListString)
     } else {
-        return
+        var idNumber = 1;
+        for(i = 0; i< storedUsersList.length; i++) {
+            if (storedUsersList[i].studentID >= 0) {
+                idNumber += 1
+            }
+        }
+        userList.push(new Student(firstName, lastName, username, password, idNumber));
+        var newLocalUserListString = JSON.stringify(userList);
+        localStorage.setItem("User", newLocalUserListString)
     }
-};
+}
