@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ed24da8-d3bc-4287-92ba-ee6362c5b2c5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/AdminIndex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mainpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Mainpage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminIndex.css" beforeDir="false" afterPath="$PROJECT_DIR$/adminIndex.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,6 +93,11 @@
       <workItem from="1571298849022" duration="107000" />
       <workItem from="1571299235500" duration="24000" />
       <workItem from="1571379606172" duration="11714000" />
+      <workItem from="1571404776742" duration="1463000" />
+      <workItem from="1571408116349" duration="84000" />
+      <workItem from="1571427261210" duration="159000" />
+      <workItem from="1571472365543" duration="3245000" />
+      <workItem from="1571475672704" duration="309000" />
     </task>
     <servers />
   </component>

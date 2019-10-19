@@ -1,29 +1,29 @@
 // User klasse
 class User {
-    constructor(firstName, lastName, username, password, sportLevel){
+    constructor(firstName, lastName, username, password, sportTeams){
          this.firstName = firstName;
          this.lastName = lastName;
          this.username = username;
          this.password = password;
-         //this.sportLevel = sportLevel;
+         this.sportTeams = sportTeams;
      }
 }
 //Coach klasse, som er nedarvet fra User
 class Coach extends User{
-    constructor(firstName, lastName, username, password, coachID){
-        super(firstName, lastName, username, password);
+    constructor(firstName, lastName, username, password, coachID, sportTeams){
+        super(firstName, lastName, username, password, sportTeams);
         this.coachID = coachID;
     }
 }
 //Student klasse, som er nedarvet fra User
 class Student extends User{
-    constructor(firstName, lastName, username, password, studentID){
-      super(firstName, lastName, username, password);
+    constructor(firstName, lastName, username, password, studentID, sportTeams){
+      super(firstName, lastName, username, password, sportTeams);
       this.studentID = studentID;
     }
 }
 
-//Tjekker om LocalStorage er tom. Hvis Local storage er tom, bliver de harcodede brugere gemt i local storage.
+//Tjekker om LocalStorage er tom. Hvis localStorage er tom, bliver dummy dataene gemt i localStorage.
 if (localStorage.getItem("User") == null) {
     var userList = [];
     //Dummy user data, som objekter der bliver pushet til et empty array
@@ -48,8 +48,8 @@ function login(){
     var storedUsersList = JSON.parse(localStorage.getItem("User"));
 
     //for loop som kører alle user objekter igennem og ser om username og password findes og matcher
-    for(i = 0; i< storedUsersList.length; i++){
-        if(username.toLocaleLowerCase().trim() == storedUsersList[i].username && password == storedUsersList[i].password){
+    for(i=0; i<storedUsersList.length; i++){
+        if(username.toLowerCase().trim() == storedUsersList[i].username && password == storedUsersList[i].password){
             console.log(username.trim() + " er logget ind" )
             if (storedUsersList[i].coachID > 0){
                 window.location.replace("AdminIndex.html");
@@ -66,12 +66,10 @@ function login(){
 //Opret ny bruger
 function newUser(){
         //Brugertype importeres (Coach eller Student)
-        var userTypes = document.getElementsByClassName('userType');
-        var len = userTypes.length;
+        var userTypes = document.getElementsByClassName("userType");
         var userType = "";
 
-        var i = 0;
-        for (i=0; i<len; i++) {
+        for (i=0; i<userTypes.length; i++) {
             if (userTypes[i].checked) {
                 userType = "Coach"
             } else {
@@ -79,37 +77,50 @@ function newUser(){
             }
         }
 
-        //Fornavn, efternavn, brugernavn og password importeres
-        var firstName = document.getElementById('newFirstName').value;
-        var lastName = document.getElementById('newLastName').value;
-        var username = document.getElementById('newUsername').value;
-        var password = document.getElementById('newPassword').value;
+        //Fornavn, efternavn, brugernavn og password importeres fra tekstfelterne
+        var firstName = document.getElementById("newFirstName").value;
+        var lastName = document.getElementById("newLastName").value;
+        var username = document.getElementById("newUserName").value.toLowerCase();
+        var password = document.getElementById("newPassword").value;
+
+        //Tomt array til sportsgrene
+        var sportLevels = [];
+
+        //Tjekker hvilke sportsgrene der er checket af, og pusher dem til sportLevels
+        var sportLevel = document.getElementsByClassName("sportLevel");
+        for (i=0; i<sportLevel.length; i++) {
+            if (sportLevel[i].checked) {
+                sportLevels.push(sportLevel[i].value)
+            }
+        }
 
         //Brugerne i local storage importeres
         var storedUsersList = JSON.parse(localStorage.getItem("User"));
 
+        //Genererer nyt unikt coachID
         if(userType == "Coach"){
-            //Genererer nyt unikt coachID
             var idNumber = 1;
-            for(i = 0; i< storedUsersList.length; i++) {
+            for(i=0; i<storedUsersList.length; i++) {
                 if (storedUsersList[i].coachID >= 0) {
                     idNumber += 1
                 }
             }
             //Opretter ny coach og gemmer brugeren i local storage
-            userList.push(new Coach(firstName, lastName, username, password, idNumber));
+            userList.push(new Coach(firstName, lastName, username, password, idNumber, sportLevels));
             var newLocalUserListString = JSON.stringify(userList);
             localStorage.setItem("User", newLocalUserListString)
         } else {
             //Genererer nyt unikt studentID
             var idNumber = 1;
-            for(i = 0; i< storedUsersList.length; i++) {
+            for(i=0; i<storedUsersList.length; i++) {
                 if (storedUsersList[i].studentID >= 0) {
                     idNumber += 1
                 }
             }
-            //Opretter ny student og gemmer brugeren i local storage
-            userList.push(new Student(firstName, lastName, username, password, idNumber));
+            //Opretter ny student og gemmer brugeren i userList
+            userList.push(new Student(firstName, lastName, username, password, idNumber, sportLevels));
+
+            //Stringify'er userList og gemmer listen i localStorage
             var newLocalUserListString = JSON.stringify(userList);
             localStorage.setItem("User", newLocalUserListString)
         }
