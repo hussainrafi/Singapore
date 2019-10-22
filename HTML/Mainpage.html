@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Login ind</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="../User.js"></script>
+</head>
+<body>
+<h1 style=color:white; align="center";"><!--indsæt titel--></h1>
+<img src="../pictures/logo1.png" alt="logo" display= "block" ; width="20%" ; height="40%" ; class="center" ; id="logo" ;>
+<div class="login-page">
+    <!-- Login funktion  -->
+    <form class="form">
+        <input id= "username" type="text" placeholder="Username"/>
+        <input id="password" type="Password" placeholder="Password"/>
+        <button type="button" id="loginButton" onclick="login()">Login</button>
+        <!-- Funktion som udløser button funktion med 'enter' key -->
+        <script>
+            //funktion som aktivere funktionen for logn ved at trykke enter, istedet for at trykke 'login'*//
+            var input = document.getElementById("password");
+            input.addEventListener("keyup", function(event){
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    document.getElementById("loginButton").click();
+                }
+            });
+        </script>
+        </form>
+    </div>
+</div>
+</body>
+</html>
