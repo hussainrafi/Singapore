@@ -44,10 +44,10 @@ facilities.push(new Facility ("hal2", "12", ["tennis1", "tennis2", "tennis3","sp
 if (localStorage.getItem("User") == null) {
     var userList = [];
     //Dummy user data, som objekter der bliver pushet til et empty array
-    userList.push(new Coach("Hussain", "Rafi", "hussain", "rafi123", 1));
-    userList.push(new Student("Philip", "Burleigh", "philip", "burleigh123", 1));
-    userList.push(new Student("Andreas", "Krogh", "andreas", "krogh123", 2));
-    userList.push(new Student("Caroline", "Lindegren", "caroline", "lindegren123", 3));
+    userList.push(new Coach("Hussain", "Rafi", "hussain", "rafi123", 1, ["fodbold1"], ["springgymnastik3"]));
+    userList.push(new Student("Philip", "Burleigh", "philip", "burleigh123", 1, ["tennis2", "springgymnastik3"]));
+    userList.push(new Student("Andreas", "Krogh", "andreas", "krogh123", 2, ["fodbold3", "tennis3"]));
+    userList.push(new Student("Caroline", "Lindegren", "caroline", "lindegren123", 3, ["fodbold1"]));
 
     var userListString = JSON.stringify(userList);
     localStorage.setItem("User", userListString);
