@@ -172,6 +172,7 @@ function newSession(userList, facilities) {
         }
     }
 
+    //Tom variabel som bliver lig med den valgte sport
     var currentSport = "";
 
     //Tjekker hvilke sportsgrene der er checket af, og pusher dem til sportLevels
@@ -182,11 +183,34 @@ function newSession(userList, facilities) {
         }
     }
 
-    var currentUsers = [];
+    //Boolean som bliver "true"
+    var sportsMatch = false;
 
+    //Tjekker om træneren underviser den sportsgren, som der er blevet krydset af.
+    //Hvis det matcher bliver "sportsMatch = true"
     for (i=0; i<coachSports.length; i++) {
         if (coachSports[i]==currentSport) {
-            console.log("test")
+            sportsMatch = true
+        }
+    }
+
+    //Hvis "sportsMatch" forbliver "false", udløses alerten "Du underviser ikke dette hold"
+    if (sportsMatch == false){
+        alert("Du underviser ikke dette hold")
+    }
+
+    //Tomt array til de brugere der er er tilmeldt det valgte hold
+    var currentUsers = [];
+
+    //Pusher du brugere, som går på det valgte hold, til "currentUsers"
+    if (sportsMatch){
+        for (i=0; i<users.length; i++){
+            var currentUserSports = users[i].sportTeams
+            for (j=0; j<currentUserSports.length; j++){
+                if (currentUserSports[j]==currentSport){
+                    currentUsers.push(users[i])
+                }
+            }
         }
     }
 }
