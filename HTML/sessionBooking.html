@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="../User.js" ></script>
 </head>
 <body>
 
@@ -11,32 +12,38 @@
 <form>
     Vælg sportsgren:
     <form class="newUser" id="nyForm">
-        <h4 style="font-weight: bold"> Brugertype </h4>
-        <input type="checkbox" class="userType" value="Coach"/> <label style="font-size: small">Administrator?</label>
         <br/>
         <br>
         <p style="font-size: small">Check fodbold-niveau af, hvis eleven er starter til fodbold:</p>
-        <input type="radio" class="sportLevel" name="fodbold" value="fodbold1"> 1
+        <input type="radio" class="sportLevel" name="sport" value="fodbold1"> 1
         <br>
-        <input type="radio" class="sportLevel" name="fodbold" value="fodbold2"> 2
+        <input type="radio" class="sportLevel" name="sport" value="fodbold2"> 2
         <br>
-        <input type="radio" class="sportLevel" name="fodbold" value="fodbold3"> 3
+        <input type="radio" class="sportLevel" name="sport" value="fodbold3"> 3
         <br>
         Check springgymnastik-niveau af, hvis eleven er starter til springgymnastik:
         <br>
-        <input type="radio" class="sportLevel" name="springgymnastik" value="springgymnastik1"> 1
+        <input type="radio" class="sportLevel" name="sport" value="springgymnastik1"> 1
         <br>
-        <input type="radio" class="sportLevel" name="springgymnastik" value="springgymnastik2"> 2
+        <input type="radio" class="sportLevel" name="sport" value="springgymnastik2"> 2
         <br>
-        <input type="radio" class="sportLevel" name="springgymnastik" value="springgymnastik3"> 3
+        <input type="radio" class="sportLevel" name="sport" value="springgymnastik3"> 3
         <br>
         Check tennis-niveau af, hvis eleven er starter til tennis:
         <br>
-        <input type="radio" class="sportLevel" name="tennis" value="tennis1"> 1
+        <input type="radio" class="sportLevel" name="sport" value="tennis1"> 1
         <br>
-        <input type="radio" class="sportLevel" name="tennis" value="tennis2"> 2
+        <input type="radio" class="sportLevel" name="sport" value="tennis2"> 2
         <br>
-        <input type="radio" class="sportLevel" name="tennis" value="tennis3"> 3
+        <input type="radio" class="sportLevel" name="sport" value="tennis3"> 3
+        <br>
+        Vælg hal:
+        <br>
+        <input type="radio" class="facilityType" name="facility" value="hal1"> hal 1
+        <br>
+        <input type="radio" class="facilityType" name="facility" value="hal2"> hal 2
+        <br>
+        <input type="radio" class="facilityType" name="facility" value="hal3"> hal 3
         <br>
         <button type="button" id="newUserButton" onclick="newSession()">Opret</button>
     </form>

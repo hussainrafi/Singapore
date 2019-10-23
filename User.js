@@ -44,10 +44,10 @@ facilities.push(new Facility ("hal2", "12", ["tennis1", "tennis2", "tennis3","sp
 if (localStorage.getItem("User") == null) {
     var userList = [];
     //Dummy user data, som objekter der bliver pushet til et empty array
-    userList.push(new Coach("Hussain", "Rafi", "hussain", "rafi123", 1, ["fodbold1"], ["springgymnastik3"]));
+    userList.push(new Coach("Hussain", "Rafi", "hussain", "rafi123", 1, ["fodbold1", "springgymnastik3"]));
     userList.push(new Student("Philip", "Burleigh", "philip", "burleigh123", 1, ["tennis2", "springgymnastik3"]));
     userList.push(new Student("Andreas", "Krogh", "andreas", "krogh123", 2, ["fodbold3", "tennis3"]));
-    userList.push(new Student("Caroline", "Lindegren", "caroline", "lindegren123", 3, ["fodbold1"]));
+    userList.push(new Student("Caroline", "Lindegren", "caroline", "lindegren123", 3, ["springgymnastik3"]));
 
     var userListString = JSON.stringify(userList);
     localStorage.setItem("User", userListString);
@@ -149,6 +149,45 @@ function newUser(){
 }
 
 //newSession funktion
-function newSession(userList, facilities){
+function newSession(userList, facilities) {
+    //Henter den træner der er logget ind
+    var coach = JSON.parse(localStorage.getItem("loggedIn"));
 
+    var coachSports = [];
+
+    for (i=0; i < coach.sportTeams.length; i++) {
+        coachSports.push(coach.sportTeams[i])
+    }
+
+    //Henter alle brugere
+    var storedUsersList = JSON.parse(localStorage.getItem("User"));
+
+    //Tomt array til de brugere som er students
+     var users = [];
+
+    //Looper igennem alle brugerne og pusher alle student til "users"
+    for (i=0; i<storedUsersList.length; i++) {
+        if (storedUsersList[i].studentID >= 0) {
+            users.push(storedUsersList[i])
+        }
+    }
+
+    var currentSport = "";
+
+    //Tjekker hvilke sportsgrene der er checket af, og pusher dem til sportLevels
+    var sportLevel = document.getElementsByClassName("sportLevel");
+    for (i=0; i<sportLevel.length; i++) {
+        if (sportLevel[i].checked) {
+            currentSport = sportLevel[i].value
+        }
+    }
+
+    var currentUsers = [];
+
+    for (i=0; i<coachSports.length; i++) {
+        if (coachSports[i]==currentSport) {
+            console.log("test")
+        }
+    }
 }
+
