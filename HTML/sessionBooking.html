@@ -10,14 +10,36 @@
 <h2> Ny Træningssession:</h2>
 <form>
     Vælg sportsgren:
-    <select type="text" id="sportType">
-        <option selected disabled> -Sportsgren- </option>
-        <option value="Fodbold">Fodbold</option>
-        <option value="Tennis">Tennis</option>
-        <option value="Springgymnastik">Springgymnastik</option>
-        <option value="Svømning">Svømning</option>
-        <option value="Håndbold">Håndbold</option>
-    </select>
+    <form class="newUser" id="nyForm">
+        <h4 style="font-weight: bold"> Brugertype </h4>
+        <input type="checkbox" class="userType" value="Coach"/> <label style="font-size: small">Administrator?</label>
+        <br/>
+        <br>
+        <p style="font-size: small">Check fodbold-niveau af, hvis eleven er starter til fodbold:</p>
+        <input type="radio" class="sportLevel" name="fodbold" value="fodbold1"> 1
+        <br>
+        <input type="radio" class="sportLevel" name="fodbold" value="fodbold2"> 2
+        <br>
+        <input type="radio" class="sportLevel" name="fodbold" value="fodbold3"> 3
+        <br>
+        Check springgymnastik-niveau af, hvis eleven er starter til springgymnastik:
+        <br>
+        <input type="radio" class="sportLevel" name="springgymnastik" value="springgymnastik1"> 1
+        <br>
+        <input type="radio" class="sportLevel" name="springgymnastik" value="springgymnastik2"> 2
+        <br>
+        <input type="radio" class="sportLevel" name="springgymnastik" value="springgymnastik3"> 3
+        <br>
+        Check tennis-niveau af, hvis eleven er starter til tennis:
+        <br>
+        <input type="radio" class="sportLevel" name="tennis" value="tennis1"> 1
+        <br>
+        <input type="radio" class="sportLevel" name="tennis" value="tennis2"> 2
+        <br>
+        <input type="radio" class="sportLevel" name="tennis" value="tennis3"> 3
+        <br>
+        <button type="button" id="newUserButton" onclick="newSession()">Opret</button>
+    </form>
 
 </form>
 

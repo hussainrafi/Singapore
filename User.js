@@ -23,6 +23,23 @@ class Student extends User{
     }
 }
 
+//Facility klasse
+class Facility {
+    constructor(facilityId, capacity, suitableSports){
+        this.facilityId = facilityId;
+        this.capacity = capacity;
+        this.suitableSports = suitableSports;
+    }
+}
+
+//Tomt array til facilities
+var facilities = []
+
+//Facility dummy data, som bliver pushet til facilities
+facilities.push(new Facility ("hal1", "10", ["fodbold1", "fodbold2", "fodbold3", "tennis1", "tennis2", "tennis3"]));
+facilities.push(new Facility ("hal2", "8", ["springgymnastik1", "springgymnastik2", "springgymnastik3"]));
+facilities.push(new Facility ("hal2", "12", ["tennis1", "tennis2", "tennis3","springgymnastik1", "springgymnastik2", "springgymnastik3"]));
+
 //Tjekker om LocalStorage er tom. Hvis localStorage er tom, bliver dummy dataene gemt i localStorage.
 if (localStorage.getItem("User") == null) {
     var userList = [];
@@ -53,8 +70,13 @@ function login(){
             console.log(username.trim() + " er logget ind" )
             if (storedUsersList[i].coachID > 0){
                 window.location.replace("AdminIndex.html");
+                var logOn = JSON.stringify(storedUsersList[i]);
+                localStorage.setItem("loggedIn", logOn);
+
             } else {
                     window.location.replace("StudentIndex.html");
+                    var logOn = JSON.stringify(storedUsersList[i]);
+                    localStorage.setItem("loggedIn", logOn);
                  }
         return
         }
@@ -124,4 +146,9 @@ function newUser(){
             var newLocalUserListString = JSON.stringify(userList);
             localStorage.setItem("User", newLocalUserListString)
         }
+}
+
+//newSession funktion
+function newSession(userList, facilities){
+
 }
