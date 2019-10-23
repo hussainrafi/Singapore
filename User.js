@@ -6,11 +6,11 @@ class User {
          this.username = username;
          this.password = password;
          this.sportTeams = sportTeams;
-     }
+    }
 }
 //Coach klasse, som er nedarvet fra User
 class Coach extends User{
-    constructor(firstName, lastName, username, password, coachID, sportTeams){
+    constructor(firstName, lastName, username, password, coachID, sportTeams, ){
         super(firstName, lastName, username, password, sportTeams);
         this.coachID = coachID;
     }
@@ -32,18 +32,29 @@ class Facility {
     }
 }
 
+//Session
+class Session {
+    constructor(coach, students, facility){
+        this.coach = coach;
+        this.students = students;
+        this.facility = facility;
+    }
+}
+
 //Tomt array til facilities
-var facilities = []
+var facilities = [];
 
 //Facility dummy data, som bliver pushet til facilities
 facilities.push(new Facility ("hal1", "10", ["fodbold1", "fodbold2", "fodbold3", "tennis1", "tennis2", "tennis3"]));
 facilities.push(new Facility ("hal2", "8", ["springgymnastik1", "springgymnastik2", "springgymnastik3"]));
-facilities.push(new Facility ("hal2", "12", ["tennis1", "tennis2", "tennis3","springgymnastik1", "springgymnastik2", "springgymnastik3"]));
+facilities.push(new Facility ("hal3", "12", ["tennis1", "tennis2", "tennis3","springgymnastik1", "springgymnastik2", "springgymnastik3"]));
 
-//Tjekker om LocalStorage er tom. Hvis localStorage er tom, bliver dummy dataene gemt i localStorage.
+//Tomt array, som alle brugere bliver pushet til
+var userList = [];
+
+//Tjekker om mappen "User", i LocalStorage, er tom. Hvis "User" er tom, bliver dummy dataene gemt i mappen.
 if (localStorage.getItem("User") == null) {
-    var userList = [];
-    //Dummy user data, som objekter der bliver pushet til et empty array
+    //Dummy user data, som bliver pushet til "userList"
     userList.push(new Coach("Hussain", "Rafi", "hussain", "rafi123", 1, ["fodbold1", "springgymnastik3"]));
     userList.push(new Student("Philip", "Burleigh", "philip", "burleigh123", 1, ["tennis2", "springgymnastik3"]));
     userList.push(new Student("Andreas", "Krogh", "andreas", "krogh123", 2, ["fodbold3", "tennis3"]));
@@ -51,10 +62,26 @@ if (localStorage.getItem("User") == null) {
 
     var userListString = JSON.stringify(userList);
     localStorage.setItem("User", userListString);
-//Hvis LocalStorage ikke er tom, hentes LocalStorage og gemmes i userList
+//Hvis "User" i LocalStorage ikke er tom, hentes dataene fra "User" og gemmes i userList
 } else {
     var userList = JSON.parse(localStorage.getItem("User"))
 }
+
+//Tomt array, som alle sessions bliver pushet til
+var sessions = [];
+
+//Tjekker om mappen "Sessions", i LocalStorage, er tom. Hvis "Sessions" er tom, bliver dummy dataene gemt i mappen.
+if (localStorage.getItem("Sessions") == null) {
+    //Dummy session data, som bliver pushet til "sessions"
+    sessions.push(new Session("Hussain",[userList[1],userList[3]], "springgymnastik3"))
+
+    var sessionsString = JSON.stringify(sessions);
+    localStorage.setItem("Sessions", sessionsString);
+} else {
+    var sessions = JSON.parse(localStorage.getItem("Sessions"))
+}
+
+
 
 //Funktion til login
 function login(){
@@ -129,8 +156,13 @@ function newUser(){
             }
             //Opretter ny coach og gemmer brugeren i local storage
             userList.push(new Coach(firstName, lastName, username, password, idNumber, sportLevels));
+
+            //Stringify'er userList og gemmer listen i localStorage
             var newLocalUserListString = JSON.stringify(userList);
             localStorage.setItem("User", newLocalUserListString)
+
+            //Alerter at brugeren er oprettet
+            alert("Ny coach oprettet!")
         } else {
             //Genererer nyt unikt studentID
             var idNumber = 1;
@@ -145,11 +177,14 @@ function newUser(){
             //Stringify'er userList og gemmer listen i localStorage
             var newLocalUserListString = JSON.stringify(userList);
             localStorage.setItem("User", newLocalUserListString)
+
+            //Alerter at brugeren er oprettet
+            alert("Ny elev oprettet!")
         }
 }
 
 //newSession funktion
-function newSession(userList, facilities) {
+function newSession() {
     //Henter den træner der er logget ind
     var coach = JSON.parse(localStorage.getItem("loggedIn"));
 
@@ -184,26 +219,27 @@ function newSession(userList, facilities) {
     }
 
     //Boolean som bliver "true"
-    var sportsMatch = false;
+    var sportsMatchCoach = false;
 
     //Tjekker om træneren underviser den sportsgren, som der er blevet krydset af.
-    //Hvis det matcher bliver "sportsMatch = true"
+    //Hvis det matcher bliver "sportsMatchCoach = true"
     for (i=0; i<coachSports.length; i++) {
         if (coachSports[i]==currentSport) {
-            sportsMatch = true
+            sportsMatchCoach = true
         }
     }
 
-    //Hvis "sportsMatch" forbliver "false", udløses alerten "Du underviser ikke dette hold"
-    if (sportsMatch == false){
+    //Hvis "sportsMatchCoach" forbliver "false", udløses alerten "Du underviser ikke dette hold"
+    if (sportsMatchCoach == false){
         alert("Du underviser ikke dette hold")
+        return;
     }
 
     //Tomt array til de brugere der er er tilmeldt det valgte hold
     var currentUsers = [];
 
     //Pusher du brugere, som går på det valgte hold, til "currentUsers"
-    if (sportsMatch){
+    if (sportsMatchCoach){
         for (i=0; i<users.length; i++){
             var currentUserSports = users[i].sportTeams
             for (j=0; j<currentUserSports.length; j++){
@@ -213,5 +249,51 @@ function newSession(userList, facilities) {
             }
         }
     }
-}
 
+    //Tom variabel som bliver lig med et facilityId
+    var pickedFacility = "";
+
+    //Gemmer den valgte facility i "pickedFacility"
+    var facilityButtons = document.getElementsByClassName("facilityType");
+    for (i=0; i<facilityButtons.length; i++) {
+        if (facilityButtons[i].checked) {
+            pickedFacility = facilityButtons[i].value
+        }
+    }
+
+    //Tom variabel som bliver lig med objektet for den valgte facility
+    var currentFacility = "";
+
+    for (i=0; i<facilities.length; i++){
+        if (pickedFacility == facilities[i].facilityId){
+            currentFacility = (facilities[i])
+        }
+    }
+
+    //Tjekker om der er plads i lokalet til det valgte antal elever
+    if (currentFacility.capacity < currentUsers.length){
+        alert(`Pladsmangel! Antal elever: ${currentUsers.length}. Makskapacitet på valgte hal: ${currentFacility.capacity}`);
+        return;
+    }
+    //Boolean som forbliver "false", medmindre at den valgte facility er egnet til den valgte sport
+    var sportsMatchFacility = false;
+
+    var currentFacilitySports = currentFacility.suitableSports;
+    for (i=0; i<currentFacilitySports.length; i++){
+            if (currentFacilitySports[i]==currentSport){
+                sportsMatchFacility = true
+            }
+    }
+
+    //Hvis "sportsMatchFacility" forbliver "false", udløses alerten "Du underviser ikke dette hold"
+    if (sportsMatchFacility == false){
+        var slicedSport = currentSport.slice(0, -1);
+        alert(`Denne hal egner sig ikke til ${slicedSport}.`);
+        return;
+    }
+
+    sessions.push(new Session(coach.firstName, currentUsers, currentSport));
+    var newSessionsString = JSON.stringify(sessions);
+    localStorage.setItem("Sessions", newSessionsString);
+    alert("Ny session oprettet!");
+}
