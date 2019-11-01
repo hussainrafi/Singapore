@@ -1,7 +1,7 @@
 ## Idræts-booking-system
 
 ### Beskrivelse
-Dette er et bookingsystem til forskellige idrætsforeninger, for at undgå forvirring om, hvem der har hvilken hal. Mange foreninger bruger de samme faciliteter, men de snakker ikke sammen, og der kan derfor opstå forvirring om, hvem der har hvilken hal og hvornår de har det. De store arenaer kan de også have store arrangementer i længere tid, der gør, at foreninger ikke kan træne som normalt, og skal derfor finde en anden hal at træne i. Denne platform skal gøre dette lettere for foreningerne. Her kan alle undervisere i de forskellige foreninger lave en bruger, hvor de kan oprette et hold, der kan meldes på de forskellige haller i en given arena eller anden træningsfacilitet. Vi tager udgangspunkt i én arena, men platformen ville sagtens kunne udvides, så alle træningshaller i Danmark ville blive vist. Man vælger blot en arena i starten af siden. Hvis der så ikke var plads i ens lokale arena, så ville foreningerne kunne se, hvor der var nogen andre ledige haller. Når underviseren har lavet en bruger, vil han/hun skulle vælge sit hold og hvilket tidsrum, som de vil træne i, og vælger derefter hvilken hal han/hun kunne tænke sig. Da det er mange forskellige foreninger, der kan lave en bruger på vores platform, skal de også bruge forskelligt udstyr til den sportsgren de nu dyrker, f.eks. håndbolde, gymnastikredskaber, hockeystave mv. Om den given hal har de rette redskaber, vil blive vist når man skal booke en hal. Derudover vil der også blive vist kapacitet, så underviseren ved hvor mange elever, der er plads til. Når underviseren har tilknyttet et givent hold til en træningssession, vil den blive vist på gymnastens side, der er tilknyttet samme hold. Gymnaster/forældre vil også kunne lave en bruger, hvor de vælger de hold, som de er tilknyttet. Når de logger ind, vil de kun kunne se deres egne træningssessioner, hvor de kan se dato, tid og hvor de skal træne den pågældende uge. 
+Dette er et bookingsystem til forskellige idrætsforeninger, for at undgå forvirring om, hvem der har hvilken hal. Mange foreninger bruger de samme faciliteter, men de snakker ikke sammen, og der kan derfor opstå forvirring om, hvem der har hvilken hal, og hvornår de har den. Denne platform skal gøre dette lettere for foreningerne. Her kan alle coaches i de forskellige foreninger lave brugere til deres elever. Når en elev oprettes, tilknyttes elevens tilmeldte sportsgrene. Når coachen vil oprette en træningssession, vælges en hal/arena/bane og et hold. Coachen kan kun oprette sessionen, hvis lokalet faktisk egner sig til den valgte sportsgren (en svømmehal kan eks. ikke bookes til et fodboldhold), hvis lokalet er ledig og hvis der er plads nok. Derudover kan en coach også kun oprette sessioner for de hold, som coachen faktisk underviser. Når coachen har tilknyttet et givent hold til en træningssession, vil den kunne ses for de elever, der er tilknyttet det hold. Vi tager udgangspunkt i én fiktiv forening, men platformen ville sagtens kunne bruges af en virkelig forening. 
 #### Aktører
 - Trænere
 - Elever
@@ -47,7 +47,17 @@ Opretter en ny bruger. Eksekveres når der trykkes på “Opret” på underside
     - Det nye objekt tilføjes til brugerlisten, og listen gemmes påny i localStorage under nøglen “User”.
  
 - newSession()
- 
+    - Træneren kan tilføje en session og lokalet vil derefter blive vist som booket og optaget.
+    - Vi laver en function kaldet newSession(), hvor vi vil kunne tilføje sessioner
+        - Brugeren der er logget ind bliver hentet fra local storage
+    - Vi opstiller et tomt array, hvor vi pusher coachens respektive sportsgrene ind igennem et for loop.
+    - Vi looper igennem alle brugere og pusher dem til “users”
+    - Vi laver en tom variabel kaldet currentSport. Vi looper herefter igennem hvilke ting der er krydset af i vores HTML dokument og pusher dem til den tomme currentSport.
+    - Vi opstiller en boolean variabel “sportsMatchCoach” der som udgangspunkt er false. 
+    - Herefter looper vi igennem coachSports for at finde ud af om den stemmer med currentSport. Hvis dette er tilfældet redefinerer vi vores sportMatchCoach til “true”, hvis ikke dette er tilfældet og den er false udløses alerten “Du underviser ikke dette hold”.
+    - Vi gør præcist det samme blot for facilitySport, hvor vi sammenligner den valgte sportsgren med faciliteten og antal users der er tilmeldt sportsgrenen. Hvis dette ikke matcher kommer der en alert der viser antal elever på holdet i forhold til kapaciteten på faciliteten.
+    - Til sidst, hvis alt stemmer, oprettes en ny instance af klassen session (se fil Session.js), som tager coachens username, de tilmeldte brugere og valgte sport, som parametre.
+
 - checkSession()
     - Eleven/træner skal kunne se en samlet oversigt over personlig bookinger.
 
