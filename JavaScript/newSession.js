@@ -52,7 +52,7 @@ function newSession() {
     //Pusher du brugere, som går på det valgte hold, til "currentUsers"
     if (sportsMatchCoach){
         for (i=0; i<users.length; i++){
-            var currentUserSports = users[i].sportTeams
+            var currentUserSports = users[i].sportTeams;
             for (j=0; j<currentUserSports.length; j++){
                 if (currentUserSports[j]==currentSport){
                     currentUsers.push(users[i])
@@ -103,8 +103,47 @@ function newSession() {
         return;
     }
 
+    //Henter info om sessionsstart
+    var bookingYear = document.getElementById("sessionYear").value;
+    var bookingMonth = document.getElementById("sessionMonth").value;
+    var bookingDay = document.getElementById("sessionDay").value;
+    var bookingHour = document.getElementById("sessionHour").value;
+    var bookingMinute = document.getElementById("sessionMinute").value;
+
+    //Gemmer sessionsstart som milisekunder
+    var startDate = new Date(bookingYear,bookingMonth,bookingDay,bookingHour,bookingMinute);
+    var startTimecode = startDate.getTime();
+
+    //Henter info om sessionsvarighed
+    var durationHours = document.getElementById("durationHours").value;
+    var durationMinute = document.getElementById("durationMinute").value;
+
+    var newDuration = new Date(1970,0,1,durationHours,durationMinute-1, 59);
+    var durationTimecode = newDuration.getTime();
+
+    var endTimecode = startTimecode + durationTimecode;
+
+    /*var sessionsCurrentFacility = [];
+
+    for (i=0; i<sessions.length; i++){
+        if (sessions[i].facilityId == currentFacility){
+            sessionsCurrentFacility.push(sessions[i])
+        }
+    }*/
+
+    for (i=0; i<sessions.length; i++){
+        var currentInterval = sessions[i].timeInterval;
+        if (currentInterval[0] <= startTimecode && startTimecode <= currentInterval[1]
+            || currentInterval[0] <= endTimecode && endTimecode <= currentInterval[1]){
+            alert("Overlappende sessioner");
+            return;
+        }
+    }
+
+    var timeInterval = [startTimecode, endTimecode];
+
     //Opretter en ny session og gemmer den i localStorage under "Sessions"
-    sessions.push(new Session(coach.username, currentUsers, currentSport));
+    sessions.push(new Session(coach.username, currentUsers, currentSport, timeInterval));
     var newSessionsString = JSON.stringify(sessions);
     localStorage.setItem("Sessions", newSessionsString);
     //Alerter "Ny session oprettet!", når en ny session er blevet oprettet

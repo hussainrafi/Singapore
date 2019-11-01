@@ -28,17 +28,18 @@
 <h2> Ny Træningssession:</h2>
 <form>
     Vælg sportsgren:
+    <br>
     <form class="newUser" id="nyForm">
-        <br/>
         <br>
-        <p style="font-size: small">Check fodbold-niveau af, hvis eleven er starter til fodbold:</p>
+        Fodbold:
+        <br>
         <input type="radio" class="sportLevel" name="sport" value="fodbold1"> 1
         <br>
         <input type="radio" class="sportLevel" name="sport" value="fodbold2"> 2
         <br>
         <input type="radio" class="sportLevel" name="sport" value="fodbold3"> 3
         <br>
-        Check springgymnastik-niveau af, hvis eleven er starter til springgymnastik:
+        Springgymnastik:
         <br>
         <input type="radio" class="sportLevel" name="sport" value="springgymnastik1"> 1
         <br>
@@ -46,7 +47,7 @@
         <br>
         <input type="radio" class="sportLevel" name="sport" value="springgymnastik3"> 3
         <br>
-        Check tennis-niveau af, hvis eleven er starter til tennis:
+        Tennis:
         <br>
         <input type="radio" class="sportLevel" name="sport" value="tennis1"> 1
         <br>
@@ -61,6 +62,135 @@
         <input type="radio" class="facilityType" name="facility" value="hal2"> hal 2
         <br>
         <input type="radio" class="facilityType" name="facility" value="hal3"> hal 3
+        <br>
+
+        <p> Vælg dato: </p>
+        <select type="text" id="sessionYear">
+            <option selected disabled>-År-</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+        </select>
+
+        <select type="text" id="sessionMonth">
+            <option selected disabled>-Måned-</option>
+            <option value="0">Januar</option>
+            <option value="1">Februar</option>
+            <option value="2">Marts</option>
+            <option value="3">April</option>
+            <option value="4">Maj</option>
+            <option value="5">Juni</option>
+            <option value="6">Juli</option>
+            <option value="7">August</option>
+            <option value="8">September</option>
+            <option value="9">Oktober</option>
+            <option value="10">November</option>
+            <option value="11">December</option>
+        </select>
+
+        <select type="text" id="sessionDay">
+        <option selected disabled>-Dag-</option>
+        <option value="1">01</option>
+        <option value="2">02</option>
+        <option value="3">03</option>
+        <option value="4">04</option>
+        <option value="5">05</option>
+        <option value="6">06</option>
+        <option value="7">07</option>
+        <option value="8">08</option>
+        <option value="9">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+        </select>
+
+        <p> Vælg starttid: </p>
+
+        <select type="text" id="sessionHour">
+            <option selected disabled>-Time-</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+        </select>
+
+        <select type="text" id="sessionMinute">
+            <option selected disabled>-Minut-</option>
+            <option value="0">00</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+            <option value="60">60</option>
+        </select>
+
+        <p>Vælg længde:</p>
+
+        <select type="text" id="durationHours">
+        <option selected disabled>-Time(r)-</option>
+        <option value="2">1</option>
+        <option value="3">2</option>
+        <option value="4">3</option>
+        <option value="5">4</option>
+        <option value="6">5</option>
+        <option value="7">6</option>
+        <option value="8">7</option>
+        <option value="9">8</option>
+        <option value="10">9</option>
+        <option value="11">10</option>
+        <option value="12">11</option>
+        <option value="13">12</option>
+        <option value="14">13</option>
+        <option value="15">14</option>
+        <option value="16">15</option>
+        <option value="17">16</option>
+        <option value="18">17</option>
+        </select>
+
+        <select type="text" id="durationMinute">
+            <option selected disabled>-Minut(ter)-</option>
+            <option value="0">00</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+            <option value="60">60</option>
+        </select>
+        <br>
         <br>
         <button type="button" id="newUserButton" onclick="newSession()">Opret</button>
     </form>
