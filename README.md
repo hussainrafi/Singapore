@@ -28,11 +28,11 @@ Logger brugeren ind. Eksekveres når der trykkes på “Login” på forsiden, o
    - Looper igennem alle registrerede brugere, og sammenligner det indtastede brugernavn og adgangskode, med hver bruger. 
         - hvis der er ikke er et match, alertes der: "Brugernavn eller adgangskode findes ikke"
    - Når der er et match, checkes der om brugeren er en elev eller en coach med administratorrettigheder. Brugeren viderestilles efter dette, til enten elev- eller coachforsiden.
-   - Objektet for den bruger, som er logget ind, gemmes i localStorage under nøglen “loggedIn”
+   - Instansen for den bruger, som er logget ind, gemmes i localStorage under nøglen “loggedIn”
 
 - logOut() <br>
 Logger brugeren ud. Eksekveres når der trykkes på “Log ud”, og fungerer på følgende måde:
-    - Sletter det objekt som er gemt i localStorage under nøglen “loggedIn” 
+    - Sletter den instans som er gemt i localStorage under nøglen “loggedIn” 
 
 - newUser() <br>
 Opretter en ny bruger. Eksekveres når der trykkes på “Opret” på undersiden “Opret ny bruger. Fungerer på følgende måde:
@@ -40,8 +40,8 @@ Opretter en ny bruger. Eksekveres når der trykkes på “Opret” på underside
         - brugernavnet bliver sammenlignet med alle gemte brugere, og alerter “Dette brugernavn er allerede i brug”, hvis der er et match.
     - Checker om den nye bruger skal være en elev eller en coach
     - Checker hvilket hold den nye bruger skal tilmeldes
-    - Opretter et unikt coach- eller elev-id (afhængigt af brugertypen) og opretter en ny coach/elev, med de indtastede værdier og det unikke id nummer, som alt sammen gemmes i et objekt.
-    - Det nye objekt tilføjes til brugerlisten, og listen gemmes påny i localStorage under nøglen “User”.
+    - Opretter et unikt coach- eller elev-id (afhængigt af brugertypen) og opretter en ny coach/elev, med de indtastede værdier og det unikke id nummer, som alt sammen gemmes som en instans af Coach/Student klassen.
+    - Den nye instans tilføjes til brugerlisten, og listen gemmes påny i localStorage under nøglen “User”.
  
 - newSession()
     - Træneren kan tilføje en session og lokalet vil derefter blive vist som booket og optaget.
