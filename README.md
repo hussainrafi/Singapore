@@ -78,3 +78,6 @@ Opretter en ny bruger. Eksekveres når der trykkes på “Opret” på underside
 
 ### UML
 ![UML](/pictures/UML.png)
+
+### Use Case Diagram
+![UCD](/pictures/UCD.png)
