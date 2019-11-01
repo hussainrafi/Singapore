@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="4ed24da8-d3bc-4287-92ba-ee6362c5b2c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/newSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/newSession.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/adminIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/adminIndex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/sessionBooking.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/sessionBooking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/loggedInInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/loggedInInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/newUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/newUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/UML.png" beforeDir="false" afterPath="$PROJECT_DIR$/pictures/UML.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +136,7 @@
       <workItem from="1572334298906" duration="10000" />
       <workItem from="1572515324614" duration="132000" />
       <workItem from="1572593191623" duration="1807000" />
-      <workItem from="1572595136818" duration="2748000" />
+      <workItem from="1572595136818" duration="7787000" />
     </task>
     <servers />
   </component>

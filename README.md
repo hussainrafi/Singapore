@@ -25,32 +25,46 @@ Dette er et bookingsystem til forskellige idrætsforeninger, for at undgå forvi
 - Skal kunne slette sin bruger
 
 #### Funktioner
-- login()
-    - Succes eller ikke succesfuld.
-- addUser()
-    - Tilføjer en bruger til login systemet.
-- deleteUser()
-    - Fjerner en bruger fra en træningssession
-- showHallSport()
-    - Viser hvilken sportsgren hallen er egnet til.
-- showHallCapacity()
-    - Viser mængden af elever der kan være i en hal.
-- showSessionPeriod()
-    - Viser tidsintervallet hallen er booket i.
-- addSession()
-    - Træneren kan tilføje en session og lokalet vil derefter blive vist som booket og optaget.
-- removeSession()
-    - Træner sletter en session.
-- studentRemoveSession()
-    - Eleven afmelder kun sig selv fra en session.
-- showAvailability()
-    - Lokalets status bliver vist (optaget = rød / ledigt = grøn).
-- editSessionDescription()
-    - Træneren skal kunne ændre holdlister, niveau og sportsgrene på bookinger.
+- login() <br>
+Logger brugeren ind. Eksekveres når der trykkes på “Login” på forsiden, og fungerer på følgende måde:
+   - Henter det indtastede brugernavn og adgangskode.
+   - Looper igennem alle registrerede brugere, og sammenligner det indtastede brugernavn og adgangskode, med hver bruger. 
+        - hvis der er ikke er et match, alertes der: "Brugernavn eller adgangskode findes ikke"
+   - Når der er et match, checkes der om brugeren er en elev eller en coach med administratorrettigheder. Brugeren viderestilles efter dette, til enten elev- eller coachforsiden.
+   - Objektet for den bruger, som er logget ind, gemmes i localStorage under nøglen “loggedIn”
+
+- logOut() <br>
+Logger brugeren ud. Eksekveres når der trykkes på “Log ud”, og fungerer på følgende måde:
+    - Sletter det objekt som er gemt i localStorage under nøglen “loggedIn” 
+
+- newUser() <br>
+Opretter en ny bruger. Eksekveres når der trykkes på “Opret” på undersiden “Opret ny bruger. Fungerer på følgende måde:
+    - Det indtastede data bliver hentet.
+        - brugernavnet bliver sammenlignet med alle gemte brugere, og alerter “Dette brugernavn er allerede i brug”, hvis der er et match.
+    - Checker om den nye bruger skal være en elev eller en coach
+    - Checker hvilket hold den nye bruger skal tilmeldes
+    - Opretter et unikt coach- eller elev-id (afhængigt af brugertypen) og opretter en ny coach/elev, med de indtastede værdier og det unikke id nummer, som alt sammen gemmes i et objekt.
+    - Det nye objekt tilføjes til brugerlisten, og listen gemmes påny i localStorage under nøglen “User”.
+ 
+- newSession()
+ 
 - checkSession()
     - Eleven/træner skal kunne se en samlet oversigt over personlig bookinger.
-- showTeamDescription()
-    - Viser holdets niveau, størrelse og lokalebookinger.
+
+- studentRemoveSession()
+    - Eleven afmelder kun sig selv fra en session.
+    
+- editSession()
+    - Træneren skal kunne ændre holdlister, niveau og sportsgrene på bookinger.
+
+- removeSession()
+    - Træner sletter en session.
+
+- deleteUser()
+    - Fjerner en bruger fra en træningssession
+
+- showAvailability()
+    - Lokalets status bliver vist (optaget = rød / ledigt = grøn).
 
 ### UML
 ![UML](/pictures/UML.png)
