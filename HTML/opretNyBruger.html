@@ -4,11 +4,14 @@
     <link rel="stylesheet" type="text/css"  href="../adminIndex.css">
     <meta charset="UTF-8">
     <title>Opret ny bruger</title>
+    <script src="../JavaScript/User.js"></script>
+    <script src="../JavaScript/newUser.js"></script>
+    <script src="../JavaScript/logOut.js"></script>
 </head>
 <body>
     <header>
         <img class="logo" src="../pictures/logo1.png" alt="logo" id="logo">
-        <script src="../User.js"></script>
+
         <nav>
             <ul class="navbar">
                 <li><a href="adminIndex.html">Hjem</a></li>
@@ -19,7 +22,7 @@
                 <li><a href="#">Om os</a> </li>
             </ul>
         </nav>
-        <a class="logout" href="Mainpage.html"><button>Log ud</button></a>
+        <a class="logout" href="Mainpage.html"><button onclick="logOut()">Log ud</button></a>
     </header>
     <div class="container" id="container">
         <div class="form-container" id="form-container">
@@ -68,4 +71,5 @@
         </div>
     </div>
 </body>
+
 </html>
