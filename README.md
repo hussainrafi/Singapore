@@ -6,23 +6,20 @@ Dette er et bookingsystem til forskellige idrætsforeninger, for at undgå forvi
 - Trænere
 - Elever
 
-#### Trænere
-- Skal have tilknyttet et navn og et efternavn
-- Skal have administrator login
-- Skal kunne oprette et nyt hold
-- Skal kunne annullere et hold
-- Skal kunne slette en elev fra en træningssession
-- Skal kunne se antal personer på sit/sine hold
-- Skal kunne se ledige lokaler med plads til sit hold
-- Skal være tilknyttet en sportsgren og et tilhørende niveau
-- Skal kunne tilføje og slette en elev fra en sportsgren
+#### Coach
+- Skal have tilknyttet et fornavn, efternavn, brugernavn og password
+- Skal have et eller flere hold tilknyttet, som coachen underviser
+- Skal have et administrator login
+- Skal kunne tilføje og slette en elev
+- Skal kunne oprette en ny session, hvis der er plads, tid og udstyr, til det valgte hold 
+- Skal kunne redigere en session
+- Skal kunne slette en session
 
-#### Elever
-- Skal have tilknyttet et navn og et efternavn
-- Skal have elev login
+#### Elev
+- Skal have tilknyttet et fornavn, efternavn, brugernavn og password
+- Skal være tilmeldt et eller flere hold
+- Skal have et elev login
 - Skal kunne afmelde sig fra et hold
-- Skal være tilknyttet en eller flere sportsgrene og tilhørende niveau
-- Skal kunne slette sin bruger
 
 #### Funktioner
 - login() <br>
