@@ -1,4 +1,4 @@
-## Idræts-booking-system
+## Booking System til Idrætsforeninger
 
 ### Beskrivelse
 Dette er et bookingsystem til forskellige idrætsforeninger, for at undgå forvirring om, hvem der har hvilken hal. Mange foreninger bruger de samme faciliteter, men de snakker ikke sammen, og der kan derfor opstå forvirring om, hvem der har hvilken hal, og hvornår de har den. Denne platform skal gøre dette lettere for foreningerne. Her kan alle coaches i de forskellige foreninger lave brugere til deres elever. Når en elev oprettes, tilknyttes elevens tilmeldte sportsgrene. Når coachen vil oprette en træningssession, vælges en hal/arena/bane og et hold. Coachen kan kun oprette sessionen, hvis lokalet faktisk egner sig til den valgte sportsgren (en svømmehal kan eks. ikke bookes til et fodboldhold), hvis lokalet er ledig og hvis der er plads nok. Derudover kan en coach også kun oprette sessioner for de hold, som coachen faktisk underviser. Når coachen har tilknyttet et givent hold til en træningssession, vil den kunne ses for de elever, der er tilknyttet det hold. Vi tager udgangspunkt i én fiktiv forening, men platformen ville sagtens kunne bruges af en virkelig forening. 
