@@ -19,15 +19,15 @@ function newSession() {
     }
 
     //Tom variabel som bliver lig med den valgte sport
-    var currentSport = "";
+    var currentSport = document.getElementById("sportLevel").value;
 
     //Tjekker hvilke sportsgrene der er checket af, og pusher dem til sportLevels
-    var sportLevel = document.getElementsByClassName("sportLevel");
+    /*var sportLevel = document.getElementsByClassName("sportLevel");
     for (i=0; i<sportLevel.length; i++) {
         if (sportLevel[i].checked) {
             currentSport = sportLevel[i].value
         }
-    }
+    }*/
 
     //Boolean som bliver "true"
     var sportsMatchCoach = false;
@@ -42,7 +42,7 @@ function newSession() {
 
     //Hvis "sportsMatchCoach" forbliver "false", udløses alerten "Du underviser ikke dette hold"
     if (sportsMatchCoach == false){
-        alert("Du underviser ikke dette hold")
+        alert("Du underviser ikke dette hold");
         return;
     }
 
@@ -62,15 +62,15 @@ function newSession() {
     }
 
     //Tom variabel som bliver lig med et facilityId
-    var pickedFacility = "";
+    var pickedFacility = document.getElementById("facilityType").value;
 
     //Gemmer den valgte facility i "pickedFacility"
-    var facilityButtons = document.getElementsByClassName("facilityType");
+    /*var facilityButtons = document.getElementsByClassName("facilityType");
     for (i=0; i<facilityButtons.length; i++) {
         if (facilityButtons[i].checked) {
             pickedFacility = facilityButtons[i].value
         }
-    }
+    }*/
 
     //Tom variabel som bliver lig med objektet for den valgte facility
     var currentFacility = "";
@@ -110,7 +110,7 @@ function newSession() {
     var bookingHour = document.getElementById("sessionHour").value;
     var bookingMinute = document.getElementById("sessionMinute").value;
 
-    //Gemmer sessionsstart som milisekunder
+    //Gemmer tidskoden for starten af session som millisekunder
     var startDate = new Date(bookingYear,bookingMonth,bookingDay,bookingHour,bookingMinute);
     var startTimecode = startDate.getTime();
 
@@ -118,21 +118,26 @@ function newSession() {
     var durationHours = document.getElementById("durationHours").value;
     var durationMinute = document.getElementById("durationMinute").value;
 
+    //Gemmer tidskoden for sessionsvarigheden som millisekunder
     var newDuration = new Date(1970,0,1,durationHours,durationMinute-1, 59);
     var durationTimecode = newDuration.getTime();
 
+    //Gemmer tidskoden for slutningen af sessionen som millisekunder
     var endTimecode = startTimecode + durationTimecode;
 
-    /*var sessionsCurrentFacility = [];
+    //Tomt array hvor sessioner med den valgte facility bliver gemt
+    var sessionsCurrentFacility = [];
 
+    //Pusher session til "sessionsCurrentFacility", hvis sessionen bliver afholdt i den valgte facility
     for (i=0; i<sessions.length; i++){
-        if (sessions[i].facilityId == currentFacility){
+        if (sessions[i].facility == currentFacility.facilityId){
             sessionsCurrentFacility.push(sessions[i])
         }
-    }*/
+    }
 
-    for (i=0; i<sessions.length; i++){
-        var currentInterval = sessions[i].timeInterval;
+    //Checker om tidsintervallet overlapper med andre sessioner i samme facility
+    for (i=0; i<sessionsCurrentFacility.length; i++){
+        var currentInterval = sessionsCurrentFacility[i].timeInterval;
         if (currentInterval[0] <= startTimecode && startTimecode <= currentInterval[1]
             || currentInterval[0] <= endTimecode && endTimecode <= currentInterval[1]){
             alert("Overlappende sessioner");
@@ -140,10 +145,11 @@ function newSession() {
         }
     }
 
+    //Gemmer tidsintervallet i et array
     var timeInterval = [startTimecode, endTimecode];
 
     //Opretter en ny session og gemmer den i localStorage under "Sessions"
-    sessions.push(new Session(coach.username, currentUsers, currentSport, timeInterval));
+    sessions.push(new Session(coach.username, currentUsers, currentSport, currentFacility.facilityId, timeInterval));
     var newSessionsString = JSON.stringify(sessions);
     localStorage.setItem("Sessions", newSessionsString);
     //Alerter "Ny session oprettet!", når en ny session er blevet oprettet

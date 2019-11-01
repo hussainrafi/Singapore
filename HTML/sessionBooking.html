@@ -27,11 +27,31 @@
 <h1> Admin Index </h1>
 <h2> Ny Træningssession:</h2>
 <form>
-    Vælg sportsgren:
-    <br>
-    <form class="newUser" id="nyForm">
+    <form class="newSession" id="nyForm">
         <br>
-        Fodbold:
+        Vælg hold:
+        <select type="text" id="sportLevel">
+            <option selected disabled>-Hold-</option>
+            <option value="fodbold1">Fodbold 1.hold</option>
+            <option value="fodbold2">Fodbold 2.hold</option>
+            <option value="fodbold3">Fodbold 3.hold</option>
+            <option value="springgymnastik1">Springgymnastik 1. hold</option>
+            <option value="springgymnastik2">Springgymnastik 2. hold</option>
+            <option value="springgymnastik3">Springgymnastik 3. hold</option>
+            <option value="tennis1">Tennis 1. hold</option>
+            <option value="tennis2">Tennis 2. hold</option>
+            <option value="tennis3">Tennis 3. hold</option>
+        </select>
+        <br>
+        <br>
+        Vælg facilitet:
+        <select type="text" id="facilityType">
+            <option selected disabled>-Facilitet-</option>
+            <option value="hal1">Indendørs fodbold- og tennisbane</option>
+            <option value="hal2">Springhal</option>
+            <option value="hal3">Indendørs tennis- og springhal</option>
+        </select>
+        <!--Fodbold:
         <br>
         <input type="radio" class="sportLevel" name="sport" value="fodbold1"> 1
         <br>
@@ -55,14 +75,13 @@
         <br>
         <input type="radio" class="sportLevel" name="sport" value="tennis3"> 3
         <br>
-        Vælg hal:
         <br>
         <input type="radio" class="facilityType" name="facility" value="hal1"> hal 1
         <br>
         <input type="radio" class="facilityType" name="facility" value="hal2"> hal 2
         <br>
         <input type="radio" class="facilityType" name="facility" value="hal3"> hal 3
-        <br>
+        <br> -->
 
         <p> Vælg dato: </p>
         <select type="text" id="sessionYear">
@@ -161,6 +180,7 @@
 
         <select type="text" id="durationHours">
         <option selected disabled>-Time(r)-</option>
+        <option value="1">0</option>
         <option value="2">1</option>
         <option value="3">2</option>
         <option value="4">3</option>
