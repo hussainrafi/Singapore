@@ -13,6 +13,14 @@ function newSession() {
     //Henter det valgte sportshold
     var currentSport = document.getElementById("sportLevel").value;
 
+    //Tjekker hvilke sportsgrene der er checket af, og pusher dem til sportLevels
+    /*var sportLevel = document.getElementsByClassName("sportLevel");
+    for (i=0; i<sportLevel.length; i++) {
+        if (sportLevel[i].checked) {
+            currentSport = sportLevel[i].value
+        }
+    }*/
+
     //Boolean som bliver "true"
     var sportsMatchCoach = false;
 
@@ -38,14 +46,6 @@ function newSession() {
             users.push(userList[i])
         }
     }
-
-    //Tjekker hvilke sportsgrene der er checket af, og pusher dem til sportLevels
-    /*var sportLevel = document.getElementsByClassName("sportLevel");
-    for (i=0; i<sportLevel.length; i++) {
-        if (sportLevel[i].checked) {
-            currentSport = sportLevel[i].value
-        }
-    }*/
 
     //Tomt array til de brugere der er er tilmeldt det valgte hold
     var currentUsers = [];

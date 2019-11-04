@@ -48,12 +48,20 @@ Opretter en ny bruger. Eksekveres når der trykkes på “Opret” på underside
     - Vi laver en function kaldet newSession(), hvor vi vil kunne tilføje sessioner
         - Brugeren der er logget ind bliver hentet fra local storage
     - Vi opstiller et tomt array, hvor vi pusher coachens respektive sportsgrene ind igennem et for loop.
-    - Vi looper igennem alle brugere og pusher dem til “users”
-    - Vi laver en tom variabel kaldet currentSport. Vi looper herefter igennem hvilke ting der er krydset af i vores HTML dokument og pusher dem til den tomme currentSport.
+    - Vi henter den sport der er valgt, og gemmer informationen i currentSport
     - Vi opstiller en boolean variabel “sportsMatchCoach” der som udgangspunkt er false. 
-    - Herefter looper vi igennem coachSports for at finde ud af om den stemmer med currentSport. Hvis dette er tilfældet redefinerer vi vores sportMatchCoach til “true”, hvis ikke dette er tilfældet og den er false udløses alerten “Du underviser ikke dette hold”.
-    - Vi gør præcist det samme blot for facilitySport, hvor vi sammenligner den valgte sportsgren med faciliteten og antal users der er tilmeldt sportsgrenen. Hvis dette ikke matcher kommer der en alert der viser antal elever på holdet i forhold til kapaciteten på faciliteten.
-    - Til sidst, hvis alt stemmer, oprettes en ny instance af klassen session (se fil Session.js), som tager coachens username, de tilmeldte brugere og valgte sport, som parametre.
+    - Herefter looper vi igennem coachSports for at finde ud af om den stemmer med currentSport. Hvis dette er tilfældet redefinerer vi vores sportMatchCoach til “true”
+        - Hvis ikke dette er tilfældet og den er false udløses alerten “Du underviser ikke dette hold”.
+    - Vi looper igennem alle brugere og pusher dem til “users”
+    - Vi henter den facility der er valgt, og gemmer informationen i facilitySport
+    - Vi gør præcist det samme blot for facilitySport, hvor vi sammenligner den valgte sportsgren med faciliteten og antal users der er tilmeldt sportsgrenen.
+        - Hvis dette ikke matcher kommer der en alert der viser antal elever på holdet i forhold til kapaciteten på faciliteten.
+    - Vi henter den valgte dato og tider
+    - Vi gemmer den ønskede start- og sluttid i variablerne startTimecode og endTimecode
+    - Vi looper igennem de sessions der allerede er booket og pusher de sessioner, som foregår i den valgte facility, til sessionsCurrentFacility
+    - Vi looper igennem sessionerne, som er gemt i sessionsCurrentFacility, og checker om der er et overlap med den valgte start- og sluttid (startTimecode og endTimecode).
+        - Hvis der er et overlap alerters der "Overlappende sessioner""  
+    - Til sidst, hvis alt stemmer, oprettes en ny instance af klassen session (se fil Session.js), som tager coachens username, de tilmeldte brugere, valgte sport, valgte facility og et tidsinterval som parametre.
 
 - checkSession()
     - Eleven/træner skal kunne se en samlet oversigt over personlig bookinger.
