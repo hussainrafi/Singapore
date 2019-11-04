@@ -1,5 +1,6 @@
 //newSession funktion
 function newSession() {
+
     //Henter den træner der er logget ind
     var coach = JSON.parse(localStorage.getItem("loggedIn"));
 
@@ -9,25 +10,8 @@ function newSession() {
         coachSports.push(coach.sportTeams[i])
     }
 
-    var users = [];
-
-    //Looper igennem alle brugerne og pusher alle student til "users"
-    for (i=0; i<userList.length; i++) {
-        if (userList[i].studentID >= 0) {
-            users.push(userList[i])
-        }
-    }
-
-    //Tom variabel som bliver lig med den valgte sport
+    //Henter det valgte sportshold
     var currentSport = document.getElementById("sportLevel").value;
-
-    //Tjekker hvilke sportsgrene der er checket af, og pusher dem til sportLevels
-    /*var sportLevel = document.getElementsByClassName("sportLevel");
-    for (i=0; i<sportLevel.length; i++) {
-        if (sportLevel[i].checked) {
-            currentSport = sportLevel[i].value
-        }
-    }*/
 
     //Boolean som bliver "true"
     var sportsMatchCoach = false;
@@ -36,7 +20,7 @@ function newSession() {
     //Hvis det matcher bliver "sportsMatchCoach = true"
     for (i=0; i<coachSports.length; i++) {
         if (coachSports[i]==currentSport) {
-            sportsMatchCoach = true
+            sportsMatchCoach = true;
         }
     }
 
@@ -46,17 +30,32 @@ function newSession() {
         return;
     }
 
+    var users = [];
+
+    //Looper igennem alle brugerne og pusher alle elever til "users"
+    for (i=0; i<userList.length; i++) {
+        if (userList[i].studentID >= 0) {
+            users.push(userList[i])
+        }
+    }
+
+    //Tjekker hvilke sportsgrene der er checket af, og pusher dem til sportLevels
+    /*var sportLevel = document.getElementsByClassName("sportLevel");
+    for (i=0; i<sportLevel.length; i++) {
+        if (sportLevel[i].checked) {
+            currentSport = sportLevel[i].value
+        }
+    }*/
+
     //Tomt array til de brugere der er er tilmeldt det valgte hold
     var currentUsers = [];
 
     //Pusher du brugere, som går på det valgte hold, til "currentUsers"
-    if (sportsMatchCoach){
-        for (i=0; i<users.length; i++){
-            var currentUserSports = users[i].sportTeams;
-            for (j=0; j<currentUserSports.length; j++){
-                if (currentUserSports[j]==currentSport){
-                    currentUsers.push(users[i])
-                }
+    for (i=0; i<users.length; i++){
+        var currentUserSports = users[i].sportTeams;
+        for (j=0; j<currentUserSports.length; j++){
+            if (currentUserSports[j]==currentSport){
+                currentUsers.push(users[i])
             }
         }
     }
@@ -73,17 +72,17 @@ function newSession() {
     }*/
 
     //Tom variabel som bliver lig med objektet for den valgte facility
-    var currentFacility = "";
+    var currentFacility = null;
 
     for (i=0; i<facilities.length; i++){
         if (pickedFacility == facilities[i].facilityId){
-            currentFacility = (facilities[i])
+            currentFacility = facilities[i]
         }
     }
 
-    //Tjekker om der er plads i lokalet til det valgte antal elever
+    //Tjekker om der er plads til det valgte hold, i lokalet
     if (currentFacility.capacity < currentUsers.length){
-        alert(`Pladsmangel! Antal elever: ${currentUsers.length}. Makskapacitet på valgte hal: ${currentFacility.capacity}`);
+        alert(`Pladsmangel! Antal elever: ${currentUsers.length}. Makskapacitet på valgte facilitet: ${currentFacility.capacity}`);
         return;
     }
     //Boolean som forbliver "false", medmindre at den valgte facility er egnet til den valgte sport
@@ -99,7 +98,7 @@ function newSession() {
     //Hvis "sportsMatchFacility" forbliver "false", udløses alerten "Du underviser ikke dette hold"
     if (sportsMatchFacility == false){
         var slicedSport = currentSport.slice(0, -1);
-        alert(`Denne hal egner sig ikke til ${slicedSport}.`);
+        alert(`Den valgte facilitet egner sig ikke til ${slicedSport}.`);
         return;
     }
 
