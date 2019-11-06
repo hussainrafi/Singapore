@@ -80,6 +80,16 @@ Opretter en ny bruger. Eksekveres når der trykkes på “Opret” på underside
 
 - showAvailability()
     - Lokalets status bliver vist (optaget = rød / ledigt = grøn).
+    
+#### Overvejelser/Ændringer
+Vi bliver hurtigt klar over at localStorage fandtes, og vi har derfor valgt at gemme alle vores brugere, faciliteter og sessioner, i localStorage. På den måde har vi nu en ”database”, der gør det muligt at gemme vores nyoprettede brugere, faciliteter og sessioner, så de ikke bliver slettet, næste gang at siden bliver opdateret. Dertil gemmer vi også instansen af den bruger, som er logget ind, som slettes når der logges du. Vores brug af localStorage, er dog kun en midlertidig løsning, indtil vi lærer at bruge en faktisk database.
+ 
+Vi har revurderet vores UML, men stadig holdt os tro til den oprindelige opbygning. I User-klassen, fandt vi hurtigt ud af, at vi skulle tilføje et brugernavn og en adgangskode, da dette var nødvendigt for at bygge en login-funktion. I Session-klassen valgte vi at tilføje ”students”, så vi kunne gemme alle tilmeldte elever i en oprettet session. Selvom at holdnavnet også er gemt i sessionen, og derved ville gøre det muligt at finde frem til eleverne, har vi valgt at tilføje students. Dette var med henblik på vores studentRemoveSession funktion, som gør det muligt for en elev at afmelde sig selv fra en session. Det virker umiddelbart enklere at fjerne en elev fra en session, end at skulle gemme alle afmeldte elever i localStorage, og derefter checke hvilke elever der ikke skal være med til en session, når det skal vises.
+ 
+Vi har valgt at fjerne en række funktioner, da de endte med at være overflødige. Dette gælder showHallSport og showHallCapacity; en funktion der skulle vise hvilke sportsgrene der egner sig til hvilke faciliteter og en funktion der viser hvor meget plads der er i en facilitet. Dette er nu erstattet af tekst i HTML. showTeamDescription er også blevet fjernet. Den skulle vise holdets niveau og størrelse, hvilket vi nu har erstattet med en fejlmeddelelse, når man opretter en session, hvis niveau eller størrelse ikke passer til henholdsvis træneren eller faciliteten.
+ 
+Slutteligt har vi valgt at ændre på mange af funktionernes navne. Dette er for at gøre det mere intuitivt, når man læser koden.
+
 
 ### UML
 ![UML](/pictures/UML.png)
