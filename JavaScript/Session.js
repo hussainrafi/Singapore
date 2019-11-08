@@ -1,11 +1,11 @@
 //Session klasse
 class Session {
-    constructor(coach, students, team, facility, timeInterval){
+    constructor(coach, team, facility, timeInterval, students){
         this.coach = coach;
-        this.students = students;
         this.team = team;
         this.facility = facility;
         this.timeInterval = timeInterval;
+        this.students = students;
     }
 }
 

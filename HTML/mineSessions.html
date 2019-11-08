@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css"  href="../adminIndex.css">
     <script src="../JavaScript/Session.js" ></script>
     <script src="../JavaScript/User.js" ></script>
-    <script src="../JavaScript/mineSession.js"></script>
+    <script src="../JavaScript/checkSessions.js"></script>
     <script src="../JavaScript/logOut.js"></script>
     <meta charset="UTF-8">
     <title>Mine sessions</title>
@@ -14,22 +14,24 @@
     <img class="logo" src="../pictures/logo1.png" alt="logo" id="logo">
     <nav>
         <ul class="navbar">
-            <li><a href="adminIndex.html">Hjem</a></li>
+            <li><a href="StudentIndex.html">Hjem</a></li>
             <li><a href="mineSessions.html">Mine sessioner</a> </li>
-            <li><a href="opretNyBruger.html">Opret ny bruger</a> </li>
             <li><a href="#">Faciliteter</a> </li>
             <li><a href="#">Min profil</a> </li>
             <li><a href="#">Om os</a> </li>
         </ul>
     </nav>
     <a class="logout" href="Mainpage.html"><button onclick="logOut()">Log ud</button></a>
-    <a class="Test" ><button onclick="mineSessions()">test</button></a>
 </header>
-<table id="sessionTabel" border="1">
-    <th>Mine sessions</th>
+
+    <div id="mountains"></div>
 
 </table>
 
+<script>
+    document.querySelector("#mountains")
+        .appendChild(checkSessions());
+</script>
 
 
 

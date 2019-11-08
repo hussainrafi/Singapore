@@ -69,7 +69,7 @@ function newUser(){
 
         //Stringify'er userList og gemmer listen i localStorage
         var newLocalUserListString = JSON.stringify(userList);
-        localStorage.setItem("User", newLocalUserListString)
+        localStorage.setItem("User", newLocalUserListString);
 
         //Alerter at brugeren er oprettet
         alert("Ny elev oprettet!")

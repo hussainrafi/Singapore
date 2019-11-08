@@ -169,7 +169,7 @@ function newSession() {
     var timeInterval = [startTimecode, endTimecode];
 
     //Opretter en ny session og gemmer den i localStorage under "Sessions"
-    sessions.push(new Session(coachObject.getFullName(), currentUsers, currentSport, currentFacility.facilityId, timeInterval));
+    sessions.push(new Session(coachObject.getFullName(), currentSport, currentFacility.facilityId, timeInterval, currentUsers));
     var newSessionsString = JSON.stringify(sessions);
     localStorage.setItem("Sessions", newSessionsString);
     //Alerter "Ny session oprettet!", når en ny session er blevet oprettet

@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ed24da8-d3bc-4287-92ba-ee6362c5b2c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/HTML/mineSessions.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScript/mineSession.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript/checkSessions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML/StudentIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/StudentIndex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/mineSessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/mineSessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/sessionBooking.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/sessionBooking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/Session.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/mineSession.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/newSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/newSession.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
