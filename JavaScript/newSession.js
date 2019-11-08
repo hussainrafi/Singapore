@@ -1,17 +1,41 @@
 //newSession funktion
 function newSession() {
+    //Tom variabel som bliver lig med den sport, som er blevet valgt
+    var currentSport = document.getElementById("sportLevel").value;
+
+    //Tom variabel som bliver lig med et facilityId
+    var pickedFacility = document.getElementById("facilityType").value;
+
+    //Henter tidsinfo om sessionen, og gemmer em i variabler
+    var bookingYear = document.getElementById("sessionYear").value;
+    var bookingMonth = document.getElementById("sessionMonth").value;
+    var bookingDay = document.getElementById("sessionDay").value;
+    var bookingHour = document.getElementById("sessionHour").value;
+    var bookingMinute = document.getElementById("sessionMinute").value;
+    var durationHours = document.getElementById("durationHours").value;
+    var durationMinute = document.getElementById("durationMinute").value;
+
+    //Array med alle de udfyldte informationer
+    var timeData = [currentSport, pickedFacility, bookingYear, bookingMonth, bookingDay, bookingHour, bookingMinute, durationHours, durationMinute];
+
+    //Checker om alle tidsinformationerne er udfyldt
+    for (i=0; i <timeData.length; i++){
+        if (timeData[i] == "notDefined"){
+            alert("Alle felter felter skal udfyldes");
+            return;
+        }
+    }
 
     //Henter den træner der er logget ind
     var coach = JSON.parse(localStorage.getItem("loggedIn"));
+
+    var coachObject = new Coach(coach.firstName, coach.lastName, coach.username, coach.password, coach.coachID, coach.sportTeams);
 
     var coachSports = [];
 
     for (i=0; i < coach.sportTeams.length; i++) {
         coachSports.push(coach.sportTeams[i])
     }
-
-    //Henter det valgte sportshold
-    var currentSport = document.getElementById("sportLevel").value;
 
     //Tjekker hvilke sportsgrene der er checket af, og pusher dem til sportLevels
     /*var sportLevel = document.getElementsByClassName("sportLevel");
@@ -60,9 +84,6 @@ function newSession() {
         }
     }
 
-    //Tom variabel som bliver lig med et facilityId
-    var pickedFacility = document.getElementById("facilityType").value;
-
     //Gemmer den valgte facility i "pickedFacility"
     /*var facilityButtons = document.getElementsByClassName("facilityType");
     for (i=0; i<facilityButtons.length; i++) {
@@ -102,20 +123,14 @@ function newSession() {
         return;
     }
 
-    //Henter info om sessionsstart
-    var bookingYear = document.getElementById("sessionYear").value;
-    var bookingMonth = document.getElementById("sessionMonth").value;
-    var bookingDay = document.getElementById("sessionDay").value;
-    var bookingHour = document.getElementById("sessionHour").value;
-    var bookingMinute = document.getElementById("sessionMinute").value;
 
-    //Gemmer tidskoden for starten af session som millisekunder
+    //Gemmer tidskoden for starten af sessionen som millisekunder
     var startDate = new Date(bookingYear,bookingMonth,bookingDay,bookingHour,bookingMinute);
     var startTimecode = startDate.getTime();
 
-    //Henter info om sessionsvarighed
-    var durationHours = document.getElementById("durationHours").value;
-    var durationMinute = document.getElementById("durationMinute").value;
+    //Opretter tidkoden for det seneste tidspunkt, som sessionen må slutte
+    var latestEnd = new Date(bookingYear, bookingMonth,bookingDay,22, 0);
+    var latestTimecode = latestEnd.getTime();
 
     //Gemmer tidskoden for sessionsvarigheden som millisekunder
     var newDuration = new Date(1970,0,1,durationHours,durationMinute-1, 59);
@@ -134,6 +149,12 @@ function newSession() {
         }
     }
 
+    //Checker om sluttidspunktet er efter lukketid
+    if (endTimecode > latestTimecode){
+        alert("Sluttidspunktet er efter lukketiden 22.00.");
+        return;
+    }
+
     //Checker om tidsintervallet overlapper med andre sessioner i samme facility
     for (i=0; i<sessionsCurrentFacility.length; i++){
         var currentInterval = sessionsCurrentFacility[i].timeInterval;
@@ -148,7 +169,7 @@ function newSession() {
     var timeInterval = [startTimecode, endTimecode];
 
     //Opretter en ny session og gemmer den i localStorage under "Sessions"
-    sessions.push(new Session(coach.username, currentUsers, currentSport, currentFacility.facilityId, timeInterval));
+    sessions.push(new Session(coachObject.getFullName(), currentUsers, currentSport, currentFacility.facilityId, timeInterval));
     var newSessionsString = JSON.stringify(sessions);
     localStorage.setItem("Sessions", newSessionsString);
     //Alerter "Ny session oprettet!", når en ny session er blevet oprettet

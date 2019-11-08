@@ -7,10 +7,13 @@ class User {
          this.password = password;
          this.sportTeams = sportTeams;
     }
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
 }
 //Coach klasse, som er nedarvet fra User
 class Coach extends User{
-    constructor(firstName, lastName, username, password, coachID, sportTeams, ){
+    constructor(firstName, lastName, username, password, coachID, sportTeams){
         super(firstName, lastName, username, password, sportTeams);
         this.coachID = coachID;
     }
@@ -22,6 +25,7 @@ class Student extends User{
       this.studentID = studentID;
     }
 }
+
 
 //Tomt array, som alle brugere bliver pushet til
 var userList = [];
@@ -40,3 +44,4 @@ if (localStorage.getItem("User") == null) {
 } else {
     var userList = JSON.parse(localStorage.getItem("User"))
 }
+

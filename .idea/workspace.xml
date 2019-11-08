@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4ed24da8-d3bc-4287-92ba-ee6362c5b2c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/sessionBooking.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/sessionBooking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/newSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/newSession.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -136,7 +138,10 @@
       <workItem from="1572937886038" duration="2252000" />
       <workItem from="1572946175251" duration="308000" />
       <workItem from="1573033457385" duration="146000" />
-      <workItem from="1573051866865" duration="451000" />
+      <workItem from="1573051866865" duration="665000" />
+      <workItem from="1573128316349" duration="2569000" />
+      <workItem from="1573139796405" duration="5033000" />
+      <workItem from="1573202028403" duration="378000" />
     </task>
     <servers />
   </component>
