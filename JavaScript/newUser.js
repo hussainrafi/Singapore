@@ -1,7 +1,8 @@
+
 //Opret ny bruger
 function newUser(){
-
     //Fornavn, efternavn, brugernavn, password, brugertype og valgte sportsgrene importeres fra tekstfelterne
+    //Dette gøres ved at bruge DOM funktionen getElementById og .value
     var firstName = document.getElementById("newFirstName").value;
     var lastName = document.getElementById("newLastName").value;
     var username = document.getElementById("newUserName").value.toLowerCase();
@@ -47,12 +48,12 @@ function newUser(){
                 idNumber += 1
             }
         }
-        //Opretter ny coach og gemmer brugeren i local storage
+        //Opretter ny coach instans og gemmer brugeren i local storage
         userList.push(new Coach(firstName, lastName, username, password, idNumber, sportLevels));
 
         //Stringify'er userList og gemmer listen i localStorage
         var newLocalUserListString = JSON.stringify(userList);
-        localStorage.setItem("User", newLocalUserListString)
+        localStorage.setItem("User", newLocalUserListString);
 
         //Alerter at brugeren er oprettet
         alert("Ny coach oprettet!")
@@ -64,8 +65,28 @@ function newUser(){
                 idNumber += 1
             }
         }
-        //Opretter ny student og gemmer brugeren i userList
-        userList.push(new Student(firstName, lastName, username, password, idNumber, sportLevels));
+
+        var newStudent = new Student(firstName, lastName, username, password, idNumber, sportLevels);
+
+        /*for (i=sessions.length - 1; i >= 0; i--){
+            let currentSessionTeam = sessions[i].team;
+            for (j=0; j<sportLevels.length;j++){
+                if (sportLevels[j]==currentSessionTeam){
+                    let coach = sessions[i].coach;
+                    let team = sessions[i].team;
+                    let facility = sessions[i].facility;
+                    let timeInterval = sessions[i].timeInterval;
+                    let students = sessions[i].students;
+                    students.push(newStudent);
+                    sessions.splice(i,1);
+
+                    sessionBuilder(coach, team, facility, timeInterval, students);
+                }
+            }
+        }*/
+
+        //Gemmer den nye student i userList
+        userList.push(newStudent);
 
         //Stringify'er userList og gemmer listen i localStorage
         var newLocalUserListString = JSON.stringify(userList);

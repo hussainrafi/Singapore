@@ -17,6 +17,35 @@ li, a{
     font-weight: bolder;
 }
 
+th{
+    font-family:"Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: #156678;
+    border-bottom: 5px solid #156678;
+    padding: 0.75%;
+}
+
+td{
+    font-family:"Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
+    padding: 0.75%;
+    border-bottom: 3px solid #156678;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+}
+
+#userSessions{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 a:hover{
     color: #ea9987;
     transition: all 0.3s ease 0s;
@@ -35,6 +64,8 @@ body{
     background-position: center;
 
 }
+
+
 
 header{
     display: flex;

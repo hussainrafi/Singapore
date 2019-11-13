@@ -11,6 +11,6 @@ class Facility {
 var facilities = [];
 
 //Facility dummy data, som bliver pushet til facilities
-facilities.push(new Facility ("hal1", "10", ["fodbold1", "fodbold2", "fodbold3", "tennis1", "tennis2", "tennis3"]));
-facilities.push(new Facility ("hal2", "8", ["springgymnastik1", "springgymnastik2", "springgymnastik3"]));
-facilities.push(new Facility ("hal3", "12", ["tennis1", "tennis2", "tennis3","springgymnastik1", "springgymnastik2", "springgymnastik3"]));
+facilities.push(new Facility ("Indendørs fodbold- og tennisbane", "10", ["Fodbold 1. hold", "Fodbold 2. hold", "Fodbold 3. hold", "Tennis 1. hold", "Tennis 2. hold", "Tennis 3. hold"]));
+facilities.push(new Facility ("Springhal", "8", ["Springgymnastik 1. hold", "Springgymnastik 2. hold", "Springgymnastik 3. hold"]));
+facilities.push(new Facility ("Indendørs tennis- og springhal", "12", ["Tennis 1. hold", "Tennis 2. hold", "Tennis 3. hold","Springgymnastik 1. hold", "Springgymnastik 2. hold", "Springgymnastik 3. hold"]));

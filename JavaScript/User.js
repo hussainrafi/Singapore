@@ -33,10 +33,10 @@ var userList = [];
 //Tjekker om mappen "User", i LocalStorage, er tom. Hvis "User" er tom, bliver dummy dataene gemt i mappen.
 if (localStorage.getItem("User") == null) {
     //Dummy user data, som bliver pushet til "userList"
-    userList.push(new Coach("Hussain", "Rafi", "hussain", "rafi123", 1, ["fodbold1", "springgymnastik3"]));
-    userList.push(new Student("Philip", "Burleigh", "philip", "burleigh123", 1, ["tennis2", "springgymnastik3"]));
-    userList.push(new Student("Andreas", "Krogh", "andreas", "krogh123", 2, ["fodbold3", "tennis3"]));
-    userList.push(new Student("Caroline", "Lindegren", "caroline", "lindegren123", 3, ["springgymnastik3"]));
+    userList.push(new Coach("Hussain", "Rafi", "hussain", "rafi123", 1, ["Fodbold 1. hold", "Springgymnastik 3. hold"]));
+    userList.push(new Student("Philip", "Burleigh", "philip", "burleigh123", 1, ["Tennis 2. hold", "Springgymnastik 3. hold"]));
+    userList.push(new Student("Andreas", "Krogh", "andreas", "krogh123", 2, ["Fodbold 3. hold", "Tennis 3. hold"]));
+    userList.push(new Student("Caroline", "Lindegren", "caroline", "lindegren123", 3, ["Springgymnastik 3. hold"]));
 
     var userListString = JSON.stringify(userList);
     localStorage.setItem("User", userListString);
