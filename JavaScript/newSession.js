@@ -95,8 +95,7 @@ function newSession(){
 
     //Hvis "sportsMatchFacility" forbliver "false", udløses alerten "Du underviser ikke dette hold"
     if (sportsMatchFacility == false){
-        var slicedSport = currentSport.slice(0, -1);
-        alert(`Den valgte facilitet egner sig ikke til ${slicedSport}.`);
+        alert(`Den valgte facilitet egner sig ikke til den valgte sport.`);
         return;
     }
 
