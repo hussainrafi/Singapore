@@ -3,16 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4ed24da8-d3bc-4287-92ba-ee6362c5b2c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/StudentIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/StudentIndex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/mineSessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/mineSessions.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML/opretNyBruger.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/opretNyBruger.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/sessionBooking.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/sessionBooking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/Facility.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/Facility.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/User.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaScript/checkSessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/checkSessions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/newSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/newSession.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/newUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/newUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminIndex.css" beforeDir="false" afterPath="$PROJECT_DIR$/adminIndex.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -164,7 +156,7 @@
       <workItem from="1573582531846" duration="125000" />
       <workItem from="1573643254140" duration="9356000" />
       <workItem from="1573654675721" duration="4899000" />
-      <workItem from="1573661741797" duration="1401000" />
+      <workItem from="1573661741797" duration="8730000" />
     </task>
     <servers />
   </component>

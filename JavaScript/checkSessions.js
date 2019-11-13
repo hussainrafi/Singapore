@@ -1,23 +1,39 @@
+function studentRemoveSession(object) {
+    for(i=sessions.length - 1; i>=0; i--){
+        if(sessions[i] == object){
+            let students = sessions[i].students;
+            let loggedInStudent = JSON.parse(localStorage.getItem("loggedIn"));
+            let newUserList = [];
+            for(j = 0; j < students.length; j++){
+                if(students[j].studentID != loggedInStudent.studentID){
+                    newUserList.push(students[j])
+                }
+            }
+            sessions[i].students = newUserList;
+            let sessionsString = JSON.stringify(sessions);
+            localStorage.setItem("Sessions", sessionsString);
+            alert("Session afmeldt!");
+            location.reload();
+        }
+    }
+}
 
 function checkSessions() {
     var user = JSON.parse(localStorage.getItem("loggedIn"));
     var userSessions = [];
 
     for (i = 0; i < sessions.length; i++) {
-        let currentSession = sessions[i].students;
-        for (j = 0; j < currentSession.length; j++) {
-            if (currentSession[j].studentID == user.studentID) {
-                sessions[i].Træner = sessions[i].coach;
-                delete sessions[i].coach;
-                sessions[i].Hold = sessions[i].team;
-                delete sessions[i].team;
-                sessions[i].Facilitet = sessions[i].facility;
-                delete sessions[i].facility;
-                sessions[i].Mødetid = sessions[i].timeInterval;
-                delete sessions[i].timeInterval;
-                delete sessions[i].students;
-                userSessions.push(sessions[i])
-
+        let currentStudents = sessions[i].students;
+        for (j = 0; j < currentStudents.length; j++) {
+            let currentSession = {
+            };
+            if (currentStudents[j].studentID == user.studentID) {
+                currentSession.Træner = sessions[i].coach;
+                currentSession.Hold = sessions[i].team;
+                currentSession.Facilitet = sessions[i].facility;
+                currentSession.Mødetid = sessions[i].timeInterval;
+                currentSession.Afmeld = sessions[i];
+                userSessions.push(currentSession)
             }
         }
     }
@@ -91,10 +107,18 @@ function checkSessions() {
         let row = document.createElement("tr");
         fields.forEach(function(field) {
             let cell = document.createElement("td");
-            cell.appendChild(document.createTextNode(object[field]));
-            if (typeof object[field] == "number") {
-                cell.style.textAlign = "right";
+            if(field == "Afmeld"){
+                let newButton = document.createElement("button");
+                newButton.innerHTML = 'Afmeld';
+                newButton.onclick = function(){
+                    studentRemoveSession(object[field])
+                };
+                cell.appendChild(newButton);
+
+            } else {
+                cell.appendChild(document.createTextNode(object[field]));
             }
+
             row.appendChild(cell);
         });
         table.appendChild(row);
