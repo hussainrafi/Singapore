@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="../adminHjemSide.css">
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="../JavaScript/User.js"></script>
+    <link rel="stylesheet" type="text/css"  href="../adminIndex.css">
+    <script src="../JavaScript/Session.js" ></script>
+    <script src="../JavaScript/User.js" ></script>
+    <script src="../JavaScript/checkSessions.js"></script>
     <script src="../JavaScript/logOut.js"></script>
+    <meta charset="UTF-8">
+    <title>Mine sessions</title>
 </head>
 <body>
 <header>
@@ -23,18 +25,20 @@
     </nav>
     <a class="logout" href="Mainpage.html"><button onclick="logOut()">Log ud</button></a>
 </header>
-<div class="welcomeBox" id="welcomeBox">
-    <h2>Velkommen </h2> <h2 id="firstName"></h2>
-    <div class="mainSlide">
-    <img src="/pictures/hal1.jpg">
 
-    </div>
-    <p>Velkommen til Doofenschmirtz sportsfaciliteter, hvor du kan administrer alle dine sessions og danne overblik over dine holdtilmeldinger.</p>
-    <p>Hvis du ikker kan finde det du søger via menuen, er du velkommen til at kontakte os på vores kontaktinformation.</p>
-    <br>
-    <a class="kontaktButton" href="#"><button>Kontakt</button></a>
+<div id="userSessions"></div>
+
+</table>
+
+<script>
+    document.querySelector("#userSessions")
+        .appendChild(checkSessions());
+</script>
 
 
-</div>
+
+
+
+
 </body>
 </html>

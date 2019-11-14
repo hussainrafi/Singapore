@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ed24da8-d3bc-4287-92ba-ee6362c5b2c5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/HTML/adminSessions.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/adminIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/adminIndex.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML/opretNyBruger.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/opretNyBruger.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML/sessionBooking.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/sessionBooking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/newSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/newSession.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/checkSessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/checkSessions.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -157,7 +159,9 @@
       <workItem from="1573582531846" duration="125000" />
       <workItem from="1573643254140" duration="9356000" />
       <workItem from="1573654675721" duration="4899000" />
-      <workItem from="1573661741797" duration="10028000" />
+      <workItem from="1573661741797" duration="10250000" />
+      <workItem from="1573718526700" duration="175000" />
+      <workItem from="1573725127211" duration="5720000" />
     </task>
     <servers />
   </component>

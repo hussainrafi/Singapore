@@ -1,6 +1,7 @@
 function studentRemoveSession(object) {
     for(i=sessions.length - 1; i>=0; i--){
         if(sessions[i] == object){
+            //Kunne have brugt slice, men så ville det kræve to slice funktioner, da det sidste element ikke ville kunne splices
             let students = sessions[i].students;
             let loggedInStudent = JSON.parse(localStorage.getItem("loggedIn"));
             let newUserList = [];
@@ -18,21 +19,51 @@ function studentRemoveSession(object) {
     }
 }
 
+function removeSession(object) {
+    let newSessionList = [];
+    for(i=sessions.length - 1; i>=0; i--){
+        if(sessions[i] != object){
+            newSessionList.push(sessions[i]);
+        }
+    }
+    let sessionsString = JSON.stringify(newSessionList);
+    localStorage.setItem("Sessions", sessionsString);
+    alert("Session aflyst!");
+    location.reload();
+}
+
 function checkSessions() {
     var user = JSON.parse(localStorage.getItem("loggedIn"));
-    var userSessions = [];
 
-    for (i = 0; i < sessions.length; i++) {
-        let currentStudents = sessions[i].students;
-        for (j = 0; j < currentStudents.length; j++) {
-            let currentSession = {
-            };
-            if (currentStudents[j].studentID == user.studentID) {
-                currentSession.Træner = sessions[i].coach;
+    if(user.studentID > 0){
+        var userSessions = [];
+
+        for (i = 0; i < sessions.length; i++) {
+            let currentStudents = sessions[i].students;
+            for (j = 0; j < currentStudents.length; j++) {
+                let currentSession = {};
+                if (currentStudents[j].studentID == user.studentID) {
+                    currentSession.Træner = sessions[i].coach;
+                    currentSession.Hold = sessions[i].team;
+                    currentSession.Facilitet = sessions[i].facility;
+                    currentSession.Mødetid = sessions[i].timeInterval;
+                    currentSession.Afmeld = sessions[i];
+                    userSessions.push(currentSession)
+                }
+            }
+        }
+    } else {
+        let coachObject = new Coach(user.firstName, user.lastName, user.password, user.coachID, user.sportTeams);
+
+        var userSessions = [];
+
+        for (i = 0; i < sessions.length; i++) {
+            if(sessions[i].coach == coachObject.getFullName()){
+                let currentSession = {};
                 currentSession.Hold = sessions[i].team;
                 currentSession.Facilitet = sessions[i].facility;
                 currentSession.Mødetid = sessions[i].timeInterval;
-                currentSession.Afmeld = sessions[i];
+                currentSession.Aflys = sessions[i];
                 userSessions.push(currentSession)
             }
         }
@@ -62,7 +93,12 @@ function checkSessions() {
         userSessions[i].Mødetid = `${date}/${month}/${year} fra ${startTime.slice(0,5)} til ${endTime.slice(0,5)}`;
     }
 
-
+    if (userSessions[0] == null){
+        let para = document.createElement("p");
+        let message = document.createTextNode("Der er ikke booket nogen sessioner");
+        para.appendChild(message);
+        return para;
+    }
 
     //Der oprettes en nyt HTML element med DOM metoden .createElement
     //Det nye HTML element bestemmes til at være en tabel, ved brug af HTML tagget "table"
@@ -107,11 +143,16 @@ function checkSessions() {
         let row = document.createElement("tr");
         fields.forEach(function(field) {
             let cell = document.createElement("td");
-            if(field == "Afmeld"){
+            if(field == "Afmeld" || field == "Aflys" ){
                 let newButton = document.createElement("button");
-                newButton.innerHTML = 'Afmeld';
+                newButton.innerHTML = field;
                 newButton.onclick = function(){
-                    studentRemoveSession(object[field])
+                    if (field == "Afmeld"){
+                        studentRemoveSession(object[field])
+                    } else {
+                        removeSession(object[field])
+                    }
+
                 };
                 cell.appendChild(newButton);
 
