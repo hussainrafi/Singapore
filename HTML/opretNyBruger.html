@@ -4,12 +4,10 @@
     <link rel="stylesheet" type="text/css"  href="../adminIndex.css">
     <meta charset="UTF-8">
     <title>Opret ny bruger</title>
-    <script src="../JavaScript/User.js"></script>
     <script src="../JavaScript/Session.js"></script>
     <script src="../JavaScript/Facility.js" ></script>
-    <script src="../JavaScript/newSession.js" type=”module” ></script>
-    <script src="../JavaScript/newUser.js" ></script>
-    <script src="../JavaScript/logOut.js"></script>
+    <script src="../JavaScript/Tools.js"></script>
+    <script src="../JavaScript/User.js"></script>
 </head>
 <body>
     <header>
@@ -26,7 +24,7 @@
                 <li><a href="#">Om os</a> </li>
             </ul>
         </nav>
-        <a class="logout" href="Mainpage.html"><button onclick="logOut()">Log ud</button></a>
+        <a class="logout" href="Mainpage.html"><button onclick="User.logOut()">Log ud</button></a>
     </header>
     <div class="container" id="container">
         <div class="form-container" id="form-container">
@@ -71,7 +69,7 @@
                     <br>
                     <input type="radio" class="sportLevel" name="tennis" value="Tennis 3. hold"> 3. hold
                     <br>
-                    <button type="button" id="newUserButton" onclick="newUser()">Opret</button>
+                    <button type="button" id="newUserButton" onclick="Coach.newUser()">Opret</button>
                 </form>
         </div>
     </div>

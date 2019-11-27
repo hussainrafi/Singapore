@@ -3,9 +3,8 @@
 <head>
     <link rel="stylesheet" type="text/css"  href="../adminIndex.css">
     <script src="../JavaScript/Session.js" ></script>
-    <script src="../JavaScript/User.js" ></script>
-    <script src="../JavaScript/checkSessions.js"></script>
-    <script src="../JavaScript/logOut.js"></script>
+    <script src="../JavaScript/Tools.js"></script>
+    <script src="../JavaScript/User.js" charset="UTF-8" ></script>
     <meta charset="UTF-8">
     <title>Mine sessions</title>
 </head>
@@ -23,7 +22,7 @@
             <li><a href="#">Om os</a> </li>
         </ul>
     </nav>
-    <a class="logout" href="Mainpage.html"><button onclick="logOut()">Log ud</button></a>
+    <a class="logout" href="Mainpage.html"><button onclick="User.logOut()">Log ud</button></a>
 </header>
 
 <div id="userSessions"></div>
@@ -32,7 +31,7 @@
 
 <script>
     document.querySelector("#userSessions")
-        .appendChild(checkSessions());
+        .appendChild(User.checkSessions());
 </script>
 
 
