@@ -57,7 +57,7 @@ html, body{
 }
 
 body{
-    background-image: radial-gradient(circle, rgba(255,237,242,.7) 0%, rgba(121,168,179,.7) 87%),url("pictures/forsidefarum.jpg");
+    background-image: radial-gradient(circle, rgba(255,237,242,.7) 0%, rgba(121,168,179,.7) 87%),url("../pictures/forsidefarum.jpg");
     margin:0;
     padding:0;
     background-size: cover;

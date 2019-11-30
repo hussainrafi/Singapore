@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="../adminHjemSide.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/adminHjemSide.css">
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="../JavaScript/Tools.js"></script>
-    <script src="../JavaScript/User.js" charset="UTF-8" ></script>
+    <script src="../JavaScript/Classes/Tools.js"></script>
+    <script src="../JavaScript/Classes/User.js" charset="UTF-8" ></script>
 </head>
 <body>
 <header>
     <img class="logo" src="../pictures/logo1.png" alt="logo" id="logo">
     <nav>
         <ul class="navbar">
-            <li><a href="adminIndex.html">Hjem</a></li>
-            <li><a href="adminSessions.html">Mine sessioner</a> </li>
-            <li><a href="sessionBooking.html">Opret session</a> </li>
-            <li><a href="opretNyBruger.html">Opret ny bruger</a> </li>
+            <li><a href="adminHjem.html">Hjem</a></li>
+            <li><a href="mineSessionsAdmin.html">Mine sessioner</a> </li>
+            <li><a href="opretSession.html">Opret session</a> </li>
+            <li><a href="administrerBrugere.html">Administrer brugere</a> </li>
             <li><a href="#">Faciliteter</a> </li>
             <li><a href="#">Min profil</a> </li>
             <li><a href="#">Om os</a> </li>
         </ul>
     </nav>
-    <a class="logout" href="Mainpage.html"><button onclick="User.logOut()">Log ud</button></a>
+    <a class="logout" href="mainpage.html"><button onclick="User.logOut()">Log ud</button></a>
 </header>
 <div class="welcomeBox" id="welcomeBox">
     <h2>Velkommen </h2> <h2 id="firstName"></h2>

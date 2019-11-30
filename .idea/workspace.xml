@@ -2,22 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ed24da8-d3bc-4287-92ba-ee6362c5b2c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/JavaScript/Tools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript/Classes/Session.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript/Classes/Tools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript/DummyData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript/HTMLSpecificFunctions/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript/HTMLSpecificFunctions/newSession.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript/HTMLSpecificFunctions/newUser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/Mainpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/Mainpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/StudentIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/StudentIndex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/adminIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/adminIndex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/adminSessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/adminSessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/mineSessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/mineSessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/opretNyBruger.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/opretNyBruger.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/sessionBooking.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/sessionBooking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/Session.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/checkSessions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/logOut.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/newSession.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/newUser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/Mainpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/mainpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/StudentIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/studentHjem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/adminIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/adminHjem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/adminSessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/mineSessionsAdmin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/minProfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/minProfil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/mineSessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/mineSessionsStudent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/opretNyBruger.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/administrerBrugere.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/sessionBooking.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/opretSession.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/Facility.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/Classes/Facility.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/Session.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/Tools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/Classes/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminHjemSide.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/adminHjemSide.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminIndex.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/adminIndex.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,13 +70,15 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$APPLICATION_CONFIG_DIR$/scratches" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/.." />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/JavaScript/Classes" />
+      <recent name="$PROJECT_DIR$/CSS" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$APPLICATION_CONFIG_DIR$/scratches" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -178,7 +187,10 @@
       <workItem from="1574151624385" duration="125000" />
       <workItem from="1574265536477" duration="17000" />
       <workItem from="1574855579721" duration="33000" />
-      <workItem from="1574855828216" duration="19149000" />
+      <workItem from="1574855828216" duration="38414000" />
+      <workItem from="1574964681953" duration="10399000" />
+      <workItem from="1575039823577" duration="145000" />
+      <workItem from="1575043383331" duration="17377000" />
     </task>
     <servers />
   </component>

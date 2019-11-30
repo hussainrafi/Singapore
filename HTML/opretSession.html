@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="../JavaScript/Session.js" ></script>
-    <script src="../JavaScript/Facility.js" ></script>
-    <script src="../JavaScript/Tools.js" ></script>
-    <script src="../JavaScript/User.js" ></script>
+    <script src="../JavaScript/Classes/Tools.js" ></script>
+    <script src="../JavaScript/Classes/Session.js" ></script>
+    <script src="../JavaScript/Classes/Facility.js" ></script>
+    <script src="../JavaScript/Classes/User.js" ></script>
+    <script src="../JavaScript/HTMLSpecificFunctions/newSession.js" ></script>
 </head>
 <body>
 <header>
     <nav>
         <ul class="navbar">
-            <li><a href="adminIndex.html">Hjem</a></li>
-            <li><a href="adminSessions.html">Mine sessioner</a> </li>
-            <li><a href="sessionBooking.html">Opret session</a> </li>
-            <li><a href="opretNyBruger.html">Opret ny bruger</a> </li>
+            <li><a href="adminHjem.html">Hjem</a></li>
+            <li><a href="mineSessionsAdmin.html">Mine sessioner</a> </li>
+            <li><a href="opretSession.html">Opret session</a> </li>
+            <li><a href="administrerBrugere.html">Administrer brugere</a> </li>
             <li><a href="#">Faciliteter</a> </li>
             <li><a href="#">Min profil</a> </li>
             <li><a href="#">Om os</a> </li>
         </ul>
     </nav>
-    <a class="logout" href="Mainpage.html"><button onclick="User.logOut()">Log ud</button></a>
+    <a class="logout" href="mainpage.html"><button onclick="User.logOut()">Log ud</button></a>
 </header>
 
 <h1> Admin Index </h1>
@@ -51,37 +52,6 @@
             <option value="Springhal">Springhal</option>
             <option value="Indendørs tennis- og springhal">Indendørs tennis- og springhal</option>
         </select>
-        <!--Fodbold:
-        <br>
-        <input type="radio" class="sportLevel" name="sport" value="fodbold1"> 1
-        <br>
-        <input type="radio" class="sportLevel" name="sport" value="fodbold2"> 2
-        <br>
-        <input type="radio" class="sportLevel" name="sport" value="fodbold3"> 3
-        <br>
-        Springgymnastik:
-        <br>
-        <input type="radio" class="sportLevel" name="sport" value="springgymnastik1"> 1
-        <br>
-        <input type="radio" class="sportLevel" name="sport" value="springgymnastik2"> 2
-        <br>
-        <input type="radio" class="sportLevel" name="sport" value="springgymnastik3"> 3
-        <br>
-        Tennis:
-        <br>
-        <input type="radio" class="sportLevel" name="sport" value="tennis1"> 1
-        <br>
-        <input type="radio" class="sportLevel" name="sport" value="tennis2"> 2
-        <br>
-        <input type="radio" class="sportLevel" name="sport" value="tennis3"> 3
-        <br>
-        <br>
-        <input type="radio" class="facilityType" name="facility" value="hal1"> hal 1
-        <br>
-        <input type="radio" class="facilityType" name="facility" value="hal2"> hal 2
-        <br>
-        <input type="radio" class="facilityType" name="facility" value="hal3"> hal 3
-        <br> -->
 
         <p> Vælg dato: </p>
         <select type="text" id="sessionYear">
@@ -210,7 +180,7 @@
         </select>
         <br>
         <br>
-        <button type="button" id="newUserButton" onclick="Coach.newSession()">Opret</button>
+        <button type="button" id="newUserButton" onclick="newSession()">Opret</button>
     </form>
 
 </form>

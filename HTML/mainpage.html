@@ -1,9 +1,13 @@
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="../style.css">
-    <script src="../JavaScript/Tools.js" ></script>
-    <script src="../JavaScript/User.js" charset="UTF-8" ></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    <script src="../JavaScript/Classes/User.js" charset="UTF-8" ></script>
+    <script src="../JavaScript/Classes/Session.js" charset="UTF-8" ></script>
+    <script src="../JavaScript/Classes/Tools.js" charset="UTF-8" ></script>
+    <script src="../JavaScript/DummyData.js" charset="UTF-8" ></script>
+    <script src="../JavaScript/HTMLSpecificFunctions/login.js" charset="UTF-8" ></script>
+
 </head>
 <body>
 <h1 style=color:white; align="center" ><!--indsæt titel--></h1>
@@ -13,7 +17,7 @@
     <form class="form">
         <input id= "username" type="text" placeholder="Username"/>
         <input id="password" type="Password" placeholder="Password"/>
-        <button type="button" id="loginButton" onclick="User.login()">Login</button>
+        <button type="button" id="loginButton" onclick="login()">Login</button>
         <!-- Funktion som udløser button funktion med 'enter' key -->
         <script>
             //funktion som aktivere funktionen for logn ved at trykke enter, istedet for at trykke 'login'*//
