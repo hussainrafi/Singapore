@@ -41,6 +41,8 @@ function newSession() {
         }
     }
 
+    let facilities = Tools.getAllFacilities();
+
     //Tom variabel som bliver lig med objektet for den valgte facility
     let currentFacility = null;
     for (let i = 0; i < facilities.length; i++) {

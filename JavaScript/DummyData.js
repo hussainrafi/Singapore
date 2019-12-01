@@ -22,11 +22,23 @@ if (localStorage.getItem("Sessions") == null) {
     let userList = Tools.getAllUsers();
 
     //Dummy session data, som bliver pushet til "sessions"
-    sessions.push(new Session("Hussain Rafi","Springgymnastik 3. hold","Springhal", [1577876400000, 1577883599000], [userList[1],userList[2], userList[3], userList[4], userList[5], userList[6], userList[7]]));
     sessions.push(new Session("Hussain Rafi","Springgymnastik 3. hold","Indendørs tennis- og springhal", [1577962800000, 1577969999000], [userList[1],userList[2], userList[3], userList[4], userList[5], userList[6], userList[7]]));
+    sessions.push(new Session("Hussain Rafi","Springgymnastik 3. hold","Springhal", [1577876400000, 1577883599000], [userList[1],userList[2], userList[3], userList[4], userList[5], userList[6], userList[7]]));
     sessions.push(new Session("Hussain Rafi","Fodbold 1. hold","Indendørs fodbold- og tennisbane", [1578049200000, 1578056399000], [userList[2], userList[3], userList[5]]));
 
     //Arrayet med dummy sessions gemmes i local storage, med nøglen "Sessions"
     Tools.saveToLocalStorage(sessions,"Sessions");
 }
 
+//Tjekker om mappen "Facilities", i LocalStorage, er tom. Hvis "User" er tom, bliver dummy dataene gemt i mappen.
+if (localStorage.getItem("Facilities") == null) {
+    //Dummy user data, som bliver pushet til "facilities"
+    let facilities = [];
+
+    facilities.push(new Facility ("Indendørs fodbold- og tennisbane", "10", ["Fodbold 1. hold", "Fodbold 2. hold", "Fodbold 3. hold", "Tennis 1. hold", "Tennis 2. hold", "Tennis 3. hold"]));
+    facilities.push(new Facility ("Springhal", "8", ["Springgymnastik 1. hold", "Springgymnastik 2. hold", "Springgymnastik 3. hold"]));
+    facilities.push(new Facility ("Indendørs tennis- og springhal", "12", ["Tennis 1. hold", "Tennis 2. hold", "Tennis 3. hold","Springgymnastik 1. hold", "Springgymnastik 2. hold", "Springgymnastik 3. hold"]));
+
+    //Gemmer til localStorage
+    Tools.saveToLocalStorage(facilities,"Facilities");
+}
