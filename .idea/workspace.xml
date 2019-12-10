@@ -3,18 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4ed24da8-d3bc-4287-92ba-ee6362c5b2c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/adminHjem.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/adminHjem.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/administrerBrugere.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/administrerBrugere.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML/mainpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/mainpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/mineSessionsStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/mineSessionsStudent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/opretSession.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/opretSession.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/studentHjem.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/studentHjem.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/Classes/Facility.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/Classes/Facility.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaScript/Classes/Tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/Classes/Tools.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/DummyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/DummyData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/HTMLSpecificFunctions/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/HTMLSpecificFunctions/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaScript/HTMLSpecificFunctions/newSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/HTMLSpecificFunctions/newSession.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/HTMLSpecificFunctions/newUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/HTMLSpecificFunctions/newUser.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -2,24 +2,8 @@ function newSession() {
     //Tom variabel som bliver lig med den sport, som er blevet valgt
     let currentTeam = document.getElementById("sportLevel").value;
 
-    //Tjekker hvilke sportsgrene der er checket af, og pusher dem til sportLevels
-    /*var sportLevel = document.getElementsByClassName("sportLevel");
-    for (i=0; i<sportLevel.length; i++) {
-        if (sportLevel[i].checked) {
-            currentTeam = sportLevel[i].value
-        }
-    }*/
-
     //Tom variabel som bliver lig med et facilityId
     let pickedFacility = document.getElementById("facilityType").value;
-
-    //Gemmer den valgte facility i "pickedFacility"
-    /*var facilityButtons = document.getElementsByClassName("facilityType");
-    for (i=0; i<facilityButtons.length; i++) {
-        if (facilityButtons[i].checked) {
-            pickedFacility = facilityButtons[i].value
-        }
-    }*/
 
     //Henter tidsinfo om sessionen, og gemmer em i variabler
     let bookingYear = document.getElementById("sessionYear").value;
@@ -36,7 +20,7 @@ function newSession() {
     //Checker om alle tidsinformationerne er udfyldt
     for (let i = 0; i < typedData.length; i++) {
         if (typedData[i] == "notDefined") {
-            alert("Alle felter felter skal udfyldes");
+            alert("Alle felter skal udfyldes");
             return;
         }
     }

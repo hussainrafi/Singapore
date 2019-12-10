@@ -113,8 +113,6 @@ class Tools {
         let newUserList = [];
         //For loop som pusher eleverne i sessionen til "newUserList",
         //medmindre elevens brugernavn stemmer overens med det brugernavn der er angivet som parameter
-        //Kunne have brugt splice, men så ville det kræve to splice funktioner
-        //, da det sidste element ikke ville kunne splices
         for(let i = 0; i < students.length; i++){
             if(students[i].username != username){
                 newUserList.push(students[i])
@@ -222,26 +220,18 @@ class Tools {
                         //med objektet for en session og et brugernavn som parameter.
                         //Derudover slettes det brugerobjekt, som property'en ligger i, fra "User" i localStorage
                         } else {
-                            //Sletter bruger fra sessioner
                             let sessions = Tools.getAllSessions();
                             for (let i=sessions.length - 1; i>=0; i--){
                                 Tools.removeUserFromSession(sessions[i], object.Brugernavn);
                             }
-                            //Sletter bruger fra userlist
                             let userList = Tools.getAllUsers();
                             for (let i = 0; i < userList.length; i++){
                                 if (userList[i].username == object.Brugernavn){
-                                    if (userList.length == 1){
-                                        userList.splice(-1,1)
-                                    } else {
-                                        userList.splice(i,1);
-                                    }
+                                    userList.splice(i,1);
                                     Tools.saveToLocalStorage(userList,"User")
                                 }
                             }
-                            //Alerter "Bruger slettet og afmeldt fra tilhørende sessioner!"
                             alert("Bruger slettet og afmeldt fra tilhørende sessioner!");
-                            //og siden opdateres derefter
                             location.reload();
                         }
 
