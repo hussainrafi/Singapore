@@ -2,7 +2,7 @@ const pool = require('./db');
 pool.query(`
 CREATE TABLE Coach (
 coachid SERIAL PRIMARY KEY
-userName text NOT NULL,
+username text NOT NULL,
 password text NOT NULL,
 firstName text NOT NULL,
 lastName text NOT NULL,

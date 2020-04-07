@@ -2,190 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ed24da8-d3bc-4287-92ba-ee6362c5b2c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/.bin/semver" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/buffer-writer/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/buffer-writer/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/buffer-writer/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/buffer-writer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/buffer-writer/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/buffer-writer/test/mocha.opts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/buffer-writer/test/writer-tests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/packet-reader/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/packet-reader/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/packet-reader/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/packet-reader/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/packet-reader/test/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-connection-string/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-connection-string/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-connection-string/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-connection-string/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-connection-string/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-connection-string/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-connection-string/test/parse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-int8/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-int8/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-int8/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-int8/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/BufferReader.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/BufferReader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/BufferReader.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/inbound-parser.test.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/inbound-parser.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/inbound-parser.test.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/index.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/index.test.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/index.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/index.test.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/messages.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/messages.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/messages.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/testing/buffer-list.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/testing/buffer-list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/testing/buffer-list.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/testing/test-buffers.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/testing/test-buffers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/dist/testing/test-buffers.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/src/BufferReader.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/src/inbound-parser.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/src/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/src/messages.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/src/testing/buffer-list.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/src/testing/test-buffers.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/src/types/chunky.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-packet-stream/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-pool/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-pool/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-pool/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-pool/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-pool/test/bring-your-own-promise.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-pool/test/connection-strings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-pool/test/connection-timeout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-pool/test/ending.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-pool/test/error-handling.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-pool/test/events.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-pool/test/idle-timeout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-pool/test/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-pool/test/logging.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-pool/test/mocha.opts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-pool/test/releasing-clients.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-pool/test/setup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-pool/test/sizing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-pool/test/submittable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-pool/test/timeout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-pool/test/verify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-types/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-types/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-types/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-types/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-types/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-types/index.test-d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-types/lib/arrayParser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-types/lib/binaryParsers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-types/lib/builtins.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-types/lib/textParsers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-types/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-types/test/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg-types/test/types.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg/lib/client.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg/lib/connection-fast.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg/lib/connection-parameters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg/lib/connection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg/lib/defaults.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg/lib/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg/lib/native/client.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg/lib/native/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg/lib/native/query.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg/lib/query.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg/lib/result.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg/lib/sasl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg/lib/type-overrides.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg/lib/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pg/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pgpass/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pgpass/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pgpass/lib/helper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pgpass/lib/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/pgpass/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/postgres-array/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/postgres-array/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/postgres-array/license" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/postgres-array/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/postgres-array/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/postgres-bytea/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/postgres-bytea/license" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/postgres-bytea/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/postgres-bytea/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/postgres-date/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/postgres-date/license" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/postgres-date/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/postgres-date/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/postgres-interval/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/postgres-interval/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/postgres-interval/license" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/postgres-interval/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/postgres-interval/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/bin/semver" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/foot.js.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/head.js.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/semver.browser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/semver.browser.js.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/semver.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/semver.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/semver.min.js.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/test/amd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/test/big-numbers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/test/clean.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/test/gtr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/test/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/test/ltr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/test/major-minor-patch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/semver/test/no-module.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/split/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/split/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/split/LICENCE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/split/examples/pretty.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/split/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/split/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/split/readme.markdown" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/split/test/options.asynct.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/split/test/partitioned_unicode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/split/test/split.asynct.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/split/test/try_catch.asynct.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/through/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/through/LICENSE.APACHE2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/through/LICENSE.MIT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/through/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/through/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/through/readme.markdown" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/through/test/async.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/through/test/auto-destroy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/through/test/buffering.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/through/test/end.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/through/test/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/xtend/.jshintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/xtend/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/xtend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/xtend/immutable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/xtend/mutable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/xtend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/xtend/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/insertSession.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tables.js" beforeDir="false" afterPath="$PROJECT_DIR$/tables.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -361,6 +181,14 @@
       <workItem from="1585608753974" duration="7000" />
       <workItem from="1586130800094" duration="62000" />
       <workItem from="1586130866500" duration="20000" />
+      <workItem from="1586130911832" duration="324000" />
+      <workItem from="1586170169587" duration="334000" />
+      <workItem from="1586170690244" duration="24000" />
+      <workItem from="1586170717555" duration="12000" />
+      <workItem from="1586170807062" duration="488000" />
+      <workItem from="1586171763764" duration="311000" />
+      <workItem from="1586172186040" duration="688000" />
+      <workItem from="1586298977004" duration="794000" />
     </task>
     <task id="LOCAL-00001" summary="ÆNDRING">
       <created>1584544484444</created>
@@ -376,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585587499787</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Oprettelse af første table, forsøger at etablerer kontakt til database i morgen!">
+      <created>1586131038099</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586131038099</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,6 +234,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="ÆNDRING" />
     <MESSAGE value="Oprettelse af serveren" />
-    <option name="LAST_COMMIT_MESSAGE" value="Oprettelse af serveren" />
+    <MESSAGE value="Oprettelse af første table, forsøger at etablerer kontakt til database i morgen!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Oprettelse af første table, forsøger at etablerer kontakt til database i morgen!" />
   </component>
 </project>
