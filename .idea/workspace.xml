@@ -2,9 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ed24da8-d3bc-4287-92ba-ee6362c5b2c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/insertSession.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/application.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/express.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/middleware/init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/middleware/query.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/request.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/response.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/router/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/router/layer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/router/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/view.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/adminHjem.html" beforeDir="false" afterPath="$PROJECT_DIR$/Views/adminHjem.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/administrerBrugere.html" beforeDir="false" afterPath="$PROJECT_DIR$/Views/administrerBrugere.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/mainpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Views/mainpage.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/minProfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/Views/minProfil.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/mineSessionsAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/Views/mineSessionsAdmin.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/mineSessionsStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/Views/mineSessionsStudent.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/opretSession.html" beforeDir="false" afterPath="$PROJECT_DIR$/Views/opretSession.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/studentHjem.html" beforeDir="false" afterPath="$PROJECT_DIR$/Views/studentHjem.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/Classes/Tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/Classes/Tools.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/HTMLSpecificFunctions/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/HTMLSpecificFunctions/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/Database/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/insertSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/insertSession.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tables.js" beforeDir="false" afterPath="$PROJECT_DIR$/tables.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +42,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -51,15 +76,16 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/.." />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Database" />
       <recent name="$PROJECT_DIR$/JavaScript/Classes" />
       <recent name="$PROJECT_DIR$/CSS" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$APPLICATION_CONFIG_DIR$/scratches" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.." />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -188,7 +214,12 @@
       <workItem from="1586170807062" duration="488000" />
       <workItem from="1586171763764" duration="311000" />
       <workItem from="1586172186040" duration="688000" />
-      <workItem from="1586298977004" duration="794000" />
+      <workItem from="1586298977004" duration="1883000" />
+      <workItem from="1586692360640" duration="308000" />
+      <workItem from="1586805720345" duration="1000" />
+      <workItem from="1587556031350" duration="524000" />
+      <workItem from="1587558142783" duration="2283000" />
+      <workItem from="1587574843943" duration="1783000" />
     </task>
     <task id="LOCAL-00001" summary="ÆNDRING">
       <created>1584544484444</created>
@@ -211,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586131038099</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Oprettelse af vores første INSERT i sessions">
+      <created>1586300142738</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586300142738</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +273,7 @@
     <MESSAGE value="ÆNDRING" />
     <MESSAGE value="Oprettelse af serveren" />
     <MESSAGE value="Oprettelse af første table, forsøger at etablerer kontakt til database i morgen!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Oprettelse af første table, forsøger at etablerer kontakt til database i morgen!" />
+    <MESSAGE value="Oprettelse af vores første INSERT i sessions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Oprettelse af vores første INSERT i sessions" />
   </component>
 </project>

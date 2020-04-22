@@ -1,6 +1,6 @@
-const pool = require('../db');
+const pool = require('./Database/db');
 pool.query(`
-/* Insert classrooms into the Classroom Table */
+/* Inserting Sessions into Session Table */
 INSERT INTO Session (team, Coach_id, student_id, facility_id, timeInterval)
 VALUES
 ('Barcelona', '303011', '563212', '093434', '15:00 - 18:00'),
@@ -12,3 +12,6 @@ VALUES
 `).then(result => {
     console.log(error, result);
 });
+
+
+

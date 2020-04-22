@@ -1,5 +1,5 @@
 function login() {
-    //Henter input fra HTML form og gemmer dem i variabler
+    //Henter input fra Views form og gemmer dem i variabler
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
 
@@ -16,14 +16,14 @@ function login() {
             //Logger træner ind ind:
             //Går ind i if-statement hvis det aktuelle bruger-objekt har et coachID som property
             if (userList[i].hasOwnProperty("coachID")) {
-                //Sender brugeren videre til "adminHjem.html"
-                window.location.replace("adminHjem.html");
+                //Sender brugeren videre til "adminHjem.ejs"
+                window.location.replace("adminHjem.ejs");
 
             //Logger elev ind:
             //Går ind i else-statement
             } else {
-                //Sender brugeren videre til "studentHjem.html"
-                window.location.replace("studentHjem.html");
+                //Sender brugeren videre til "studentHjem.ejs"
+                window.location.replace("studentHjem.ejs");
 
             }
             //Gemmer objektet for den bruger der er logget ind i localStorage, med nøglen "loggenIn"
