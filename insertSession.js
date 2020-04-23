@@ -1,7 +1,7 @@
 const pool = require('./Database/db');
 pool.query(`
 /* Inserting Sessions into Session Table */
-INSERT INTO Session (team, Coach_id, student_id, facility_id, timeInterval)
+INSERT INTO Session (team, coachid, student_id, facility_id, timeInterval)
 VALUES
 ('Barcelona', '303011', '563212', '093434', '15:00 - 18:00'),
     ('Real Madrid', '303012', '563213' '093435', '18:00 - 22:00'),

@@ -18,7 +18,7 @@ sportsTeam text NOT NULL);
 
 CREATE TABLE Session (
 team text NOT NULL,
-Coach_id INT REFERENCES Coach (id));
+coachid INT REFERENCES Coach (id));
 student_id INT REFERENCES Student(id));
 facility_id INT REFERENCES Facility (id)); 
 timeInterval text NOT NULL);

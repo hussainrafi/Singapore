@@ -1,35 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ed24da8-d3bc-4287-92ba-ee6362c5b2c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/node_modules/express/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/application.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/express.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/middleware/init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/middleware/query.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/request.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/response.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/router/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/router/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/router/route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/express/lib/view.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/express/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="5b140faa-3b26-488f-a9a7-4b4f31447ac9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Database/Controllers/sessionController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/adminHjem.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/administrerBrugere.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/mainpage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/minProfil.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/mineSessionsAdmin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/mineSessionsStudent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/opretSession.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/studentHjem.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/adminHjem.html" beforeDir="false" afterPath="$PROJECT_DIR$/Views/adminHjem.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/administrerBrugere.html" beforeDir="false" afterPath="$PROJECT_DIR$/Views/administrerBrugere.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/mainpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Views/mainpage.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/minProfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/Views/minProfil.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/mineSessionsAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/Views/mineSessionsAdmin.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/mineSessionsStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/Views/mineSessionsStudent.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/opretSession.html" beforeDir="false" afterPath="$PROJECT_DIR$/Views/opretSession.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/studentHjem.html" beforeDir="false" afterPath="$PROJECT_DIR$/Views/studentHjem.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/Classes/Tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/Classes/Tools.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/HTMLSpecificFunctions/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/HTMLSpecificFunctions/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/Database/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/Database/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/adminHjem.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/administrerBrugere.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/mainpage.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/minProfil.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/mineSessionsAdmin.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/mineSessionsStudent.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/opretSession.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/studentHjem.ejs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/insertSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/insertSession.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tables.js" beforeDir="false" afterPath="$PROJECT_DIR$/tables.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,52 +35,27 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="$PROJECT_DIR$/.idea" />
-      </set>
-    </option>
-  </component>
-  <component name="ProjectId" id="1RdP7LQhvAqrFi4xC9yzVyTLQTM" />
+  <component name="ProjectId" id="1aua06Il3fVZMfPu7fNQaJgzY4t" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript&#10;HTML" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Database" />
-      <recent name="$PROJECT_DIR$/JavaScript/Classes" />
-      <recent name="$PROJECT_DIR$/CSS" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$APPLICATION_CONFIG_DIR$/scratches" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/.." />
-      <recent name="$PROJECT_DIR$" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -100,156 +69,36 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.newSession.js">
-    <configuration name="Facility.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Facility.js" working-dir="$PROJECT_DIR$">
-      <method v="2" />
-    </configuration>
-    <configuration name="Session.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Session.js" working-dir="$PROJECT_DIR$">
-      <method v="2" />
-    </configuration>
-    <configuration name="User.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/User.js" working-dir="$PROJECT_DIR$">
-      <method v="2" />
-    </configuration>
-    <configuration name="mineSession.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="mineSession.js" working-dir="$PROJECT_DIR$/JavaScript">
-      <method v="2" />
-    </configuration>
-    <configuration name="newSession.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/JavaScript/newSession.js" working-dir="$PROJECT_DIR$/JavaScript">
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Node.js.newSession.js" />
-        <item itemvalue="Node.js.mineSession.js" />
-        <item itemvalue="Node.js.User.js" />
-        <item itemvalue="Node.js.Session.js" />
-        <item itemvalue="Node.js.Facility.js" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4ed24da8-d3bc-4287-92ba-ee6362c5b2c5" name="Default Changelist" comment="" />
-      <created>1569993830275</created>
+      <changelist id="5b140faa-3b26-488f-a9a7-4b4f31447ac9" name="Default Changelist" comment="" />
+      <created>1587587706520</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1569993830275</updated>
-      <workItem from="1569993831457" duration="941000" />
-      <workItem from="1569995031996" duration="5386000" />
-      <workItem from="1570619036625" duration="8000" />
-      <workItem from="1570619121489" duration="338000" />
-      <workItem from="1570619960069" duration="113000" />
-      <workItem from="1570620949608" duration="17000" />
-      <workItem from="1570621169295" duration="11116000" />
-      <workItem from="1570794930654" duration="424000" />
-      <workItem from="1571119938004" duration="1811000" />
-      <workItem from="1571135880751" duration="20000" />
-      <workItem from="1571136299404" duration="207000" />
-      <workItem from="1571157108281" duration="99000" />
-      <workItem from="1571157225191" duration="34000" />
-      <workItem from="1571159061491" duration="1019000" />
-      <workItem from="1571298849022" duration="107000" />
-      <workItem from="1571299235500" duration="24000" />
-      <workItem from="1571379606172" duration="11714000" />
-      <workItem from="1571404776742" duration="1463000" />
-      <workItem from="1571408116349" duration="84000" />
-      <workItem from="1571427261210" duration="159000" />
-      <workItem from="1571472365543" duration="3245000" />
-      <workItem from="1571475672704" duration="309000" />
-      <workItem from="1571477228794" duration="138000" />
-      <workItem from="1571673885456" duration="14000" />
-      <workItem from="1571677345268" duration="137000" />
-      <workItem from="1571741050803" duration="261000" />
-      <workItem from="1571743559034" duration="25000" />
-      <workItem from="1571828444524" duration="13639000" />
-      <workItem from="1571843182234" duration="9838000" />
-      <workItem from="1571924102740" duration="1408000" />
-      <workItem from="1572254556545" duration="19000" />
-      <workItem from="1572275591594" duration="564000" />
-      <workItem from="1572334298906" duration="10000" />
-      <workItem from="1572515324614" duration="132000" />
-      <workItem from="1572593191623" duration="1807000" />
-      <workItem from="1572595136818" duration="8561000" />
-      <workItem from="1572685406619" duration="2420000" />
-      <workItem from="1572937886038" duration="2252000" />
-      <workItem from="1572946175251" duration="308000" />
-      <workItem from="1573033457385" duration="146000" />
-      <workItem from="1573051866865" duration="665000" />
-      <workItem from="1573128316349" duration="2569000" />
-      <workItem from="1573139796405" duration="5033000" />
-      <workItem from="1573202028403" duration="378000" />
-      <workItem from="1573550112794" duration="4188000" />
-      <workItem from="1573574781191" duration="7497000" />
-      <workItem from="1573582531846" duration="125000" />
-      <workItem from="1573643254140" duration="9356000" />
-      <workItem from="1573654675721" duration="4899000" />
-      <workItem from="1573661741797" duration="10250000" />
-      <workItem from="1573718526700" duration="175000" />
-      <workItem from="1573725127211" duration="6832000" />
-      <workItem from="1573748609502" duration="113000" />
-      <workItem from="1573764116561" duration="3000000" />
-      <workItem from="1574065774060" duration="23000" />
-      <workItem from="1574151624385" duration="125000" />
-      <workItem from="1574265536477" duration="17000" />
-      <workItem from="1574855579721" duration="33000" />
-      <workItem from="1574855828216" duration="38414000" />
-      <workItem from="1574964681953" duration="10399000" />
-      <workItem from="1575039823577" duration="145000" />
-      <workItem from="1575043383331" duration="42476000" />
-      <workItem from="1584544450650" duration="566000" />
-      <workItem from="1585134554571" duration="447000" />
-      <workItem from="1585149901340" duration="309000" />
-      <workItem from="1585226094816" duration="57000" />
-      <workItem from="1585587068564" duration="1991000" />
-      <workItem from="1585605053875" duration="1087000" />
-      <workItem from="1585608753974" duration="7000" />
-      <workItem from="1586130800094" duration="62000" />
-      <workItem from="1586130866500" duration="20000" />
-      <workItem from="1586130911832" duration="324000" />
-      <workItem from="1586170169587" duration="334000" />
-      <workItem from="1586170690244" duration="24000" />
-      <workItem from="1586170717555" duration="12000" />
-      <workItem from="1586170807062" duration="488000" />
-      <workItem from="1586171763764" duration="311000" />
-      <workItem from="1586172186040" duration="688000" />
-      <workItem from="1586298977004" duration="1883000" />
-      <workItem from="1586692360640" duration="308000" />
-      <workItem from="1586805720345" duration="1000" />
-      <workItem from="1587556031350" duration="524000" />
-      <workItem from="1587558142783" duration="2283000" />
-      <workItem from="1587574843943" duration="1783000" />
+      <updated>1587587706520</updated>
+      <workItem from="1587587707929" duration="29000" />
+      <workItem from="1587587760942" duration="262000" />
+      <workItem from="1587588899370" duration="84000" />
+      <workItem from="1587589382041" duration="5000" />
+      <workItem from="1587589708239" duration="50000" />
+      <workItem from="1587666988705" duration="831000" />
+      <workItem from="1587671518449" duration="336000" />
+      <workItem from="1587672340994" duration="820000" />
+      <workItem from="1587674547613" duration="228000" />
+      <workItem from="1587675696138" duration="169000" />
+      <workItem from="1587676322981" duration="20000" />
+      <workItem from="1587676371026" duration="534000" />
+      <workItem from="1587677136835" duration="18000" />
+      <workItem from="1587677518722" duration="272000" />
+      <workItem from="1587677821584" duration="2000" />
+      <workItem from="1587677839505" duration="201000" />
+      <workItem from="1587678140236" duration="48000" />
+      <workItem from="1587678239771" duration="153000" />
+      <workItem from="1587678489407" duration="347000" />
     </task>
-    <task id="LOCAL-00001" summary="ÆNDRING">
-      <created>1584544484444</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1584544484444</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Oprettelse af serveren">
-      <created>1585587499787</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1585587499787</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Oprettelse af første table, forsøger at etablerer kontakt til database i morgen!">
-      <created>1586131038099</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1586131038099</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Oprettelse af vores første INSERT i sessions">
-      <created>1586300142738</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1586300142738</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,10 +119,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ÆNDRING" />
-    <MESSAGE value="Oprettelse af serveren" />
-    <MESSAGE value="Oprettelse af første table, forsøger at etablerer kontakt til database i morgen!" />
-    <MESSAGE value="Oprettelse af vores første INSERT i sessions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Oprettelse af vores første INSERT i sessions" />
   </component>
 </project>
