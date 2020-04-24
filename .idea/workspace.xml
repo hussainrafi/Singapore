@@ -2,29 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b140faa-3b26-488f-a9a7-4b4f31447ac9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Database/Controllers/sessionController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/adminHjem.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/administrerBrugere.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/mainpage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/minProfil.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/mineSessionsAdmin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/mineSessionsStudent.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/opretSession.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/studentHjem.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ejs/bin/cli.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ejs/ejs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ejs/ejs.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ejs/jakefile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ejs/lib/ejs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ejs/lib/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ejs/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ejs/postinstall.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/path/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/path/path.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/Database/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/adminHjem.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/administrerBrugere.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/mainpage.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/minProfil.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/mineSessionsAdmin.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/mineSessionsStudent.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/opretSession.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/studentHjem.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/insertSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/insertSession.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tables.js" beforeDir="false" afterPath="$PROJECT_DIR$/tables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Public/CSS/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/adminHjemSide.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/CSS/adminHjemSide.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/adminIndex.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/CSS/adminIndex.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/CSS/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/Controllers/sessionController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/Classes/Facility.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/JavaScript/Classes/Facility.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/Classes/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/JavaScript/Classes/Session.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/Classes/Tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/JavaScript/Classes/Tools.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/Classes/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/JavaScript/Classes/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/DummyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/JavaScript/DummyData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/HTMLSpecificFunctions/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/JavaScript/HTMLSpecificFunctions/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/HTMLSpecificFunctions/newSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/JavaScript/HTMLSpecificFunctions/newSession.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/HTMLSpecificFunctions/newUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/JavaScript/HTMLSpecificFunctions/newUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/adminHjem.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Views/adminHjem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/administrerBrugere.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Views/administrerBrugere.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/mainpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Views/mainpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/minProfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Views/minProfil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/mineSessionsAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Views/mineSessionsAdmin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/mineSessionsStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Views/mineSessionsStudent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/opretSession.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Views/opretSession.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/studentHjem.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Views/studentHjem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insertSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/insertSession.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/express/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/express/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/Tennishal.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Public/pictures/Tennishal.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/UCD.png" beforeDir="false" afterPath="$PROJECT_DIR$/Public/pictures/UCD.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/UML.png" beforeDir="false" afterPath="$PROJECT_DIR$/Public/pictures/UML.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/farumarena.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Public/pictures/farumarena.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/fodbolddiv.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Public/pictures/fodbolddiv.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/forsidefarum.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Public/pictures/forsidefarum.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/hal1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Public/pictures/hal1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/logo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Public/pictures/logo1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/springhal.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Public/pictures/springhal.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/tennisdiv.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Public/pictures/tennisdiv.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tables.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/tables.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +83,14 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Public" />
+      <recent name="$PROJECT_DIR$/Server" />
+      <recent name="$PROJECT_DIR$/Client" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -98,7 +133,25 @@
       <workItem from="1587678140236" duration="48000" />
       <workItem from="1587678239771" duration="153000" />
       <workItem from="1587678489407" duration="347000" />
+      <workItem from="1587679424276" duration="687000" />
+      <workItem from="1587725960486" duration="113000" />
+      <workItem from="1587726271118" duration="2956000" />
+      <workItem from="1587732116146" duration="22000" />
+      <workItem from="1587732190776" duration="39000" />
+      <workItem from="1587738098807" duration="259000" />
+      <workItem from="1587738524010" duration="8000" />
+      <workItem from="1587738566495" duration="76000" />
+      <workItem from="1587738670394" duration="65000" />
+      <workItem from="1587738745495" duration="39000" />
     </task>
+    <task id="LOCAL-00001" summary="Skub skub til serveren">
+      <created>1587679587269</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587679587269</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,5 +172,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Skub skub til serveren" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skub skub til serveren" />
   </component>
 </project>

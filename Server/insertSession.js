@@ -1,4 +1,4 @@
-const pool = require('./Database/db');
+const pool = require('./db');
 pool.query(`
 /* Inserting Sessions into Session Table */
 INSERT INTO Session (team, coachid, student_id, facility_id, timeInterval)

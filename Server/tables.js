@@ -1,4 +1,4 @@
-const pool = require('./Database/db');
+const pool = require('./db');
 pool.query(`
 CREATE TABLE Coach (
 coachid SERIAL PRIMARY KEY
