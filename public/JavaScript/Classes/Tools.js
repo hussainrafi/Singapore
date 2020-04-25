@@ -138,8 +138,8 @@ class Tools {
     //Property-navnene bliver kolonnenavnene
     //Property-værdierne bliver rækkerne
     static tableBuilder(arrayOfObjects){
-        //Der oprettes en nyt Views element med DOM metoden .createElement
-        //Det nye Views element bestemmes til at være en tabel, ved brug af Views tagget "table"
+        //Der oprettes en nyt views element med DOM metoden .createElement
+        //Det nye views element bestemmes til at være en tabel, ved brug af views tagget "table"
         //Den nye tabel gemmes i JS variablen "table"
         let table = document.createElement("table");
 
@@ -149,8 +149,8 @@ class Tools {
         //Dette array gemmes i JS variablen "fields".
         let fields = Object.keys(arrayOfObjects[0]);
 
-        //Der oprettes en nyt Views element med DOM metoden .createElement
-        //Det nye Views element bestemmes til at være en tabelrække, ved brug af Views tagget "tr"
+        //Der oprettes en nyt views element med DOM metoden .createElement
+        //Det nye views element bestemmes til at være en tabelrække, ved brug af views tagget "tr"
         //Den nye tabelrække gemmes i JS variablen "headRow"
         let headRow = document.createElement("tr");
 
@@ -159,15 +159,15 @@ class Tools {
         //I dette tilfælde looper den igennem alle værdierne i arrayet "fields og executer en funktion med den aktuelle værdi som argument"
         fields.forEach(function(field) {
 
-            //Der oprettes en nyt Views element med DOM metoden .createElement
-            //Det nye Views element bestemmes til at være en tabeloverskrift, ved brug af Views tagget "th"
+            //Der oprettes en nyt views element med DOM metoden .createElement
+            //Det nye views element bestemmes til at være en tabeloverskrift, ved brug af views tagget "th"
             //Den nye tabel gemmes i JS variablen "headCell"
             let headCell = document.createElement("th");
 
             //Ved brug af DOM metoden .createTextNode(), omdannes den string, som "field" repræsenterer, til en node
             //"field" skal omdannes til en node, da noden bruges som parameter i .appendChild()
             //.appendChild() metoden tager en node (her "field") og sætter det til at være lig med værdien,
-            //for det valgte Views element (her "headCell)
+            //for det valgte views element (her "headCell)
             headCell.appendChild(document.createTextNode(field));
 
             //.appendChild() bruges igen, for at tilføje tabelOverskriften "headCell" til tabelrækken "headRow"
@@ -339,7 +339,7 @@ class Tools {
         //Besked som bliver vist hvis ikke der er booket nogle sessioner i brugerens navn:
         //Går ind i if-statement, hvis ikke der er nogle sessioner i "userSessions"
         if (userSessions[0] == null) {
-            //Laver et Views paragraph tag og gemmer det i variablen "para"
+            //Laver et views paragraph tag og gemmer det i variablen "para"
             let para = document.createElement("p");
             //Gemmer stringen "Der er ikke booket nogen sessioner" i variablen "message"
             let message = document.createTextNode("Der er ikke booket nogen sessioner");
@@ -387,7 +387,7 @@ class Tools {
         //Besked som bliver vist hvis ikke træneren underviser nogle elever:
         //Går ind i if-statement, hvis ikke der er nogle elever i "coachStudents"
         if (coachStudents[0] == null) {
-            //Laver et Views paragraph tag og gemmer det i variablen "para"
+            //Laver et views paragraph tag og gemmer det i variablen "para"
             let para = document.createElement("p");
             //Gemmer stringen "Du underviser ikke nogen elever" i variablen "message"
             let message = document.createTextNode("Du underviser ikke nogen elever");

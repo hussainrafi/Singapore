@@ -92,7 +92,7 @@ Slutteligt har vi valgt at ændre på mange af funktionernes navne. Dette er for
 
 
 ### UML
-![UML](/Public/pictures/UML.png)
+![UML](/public/pictures/UML.png)
 
 ### Use Case Diagram
-![UCD](/Public/pictures/UCD.png)
+![UCD](/public/pictures/UCD.png)

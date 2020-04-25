@@ -1,5 +1,5 @@
 function login() {
-    //Henter input fra Views form og gemmer dem i variabler
+    //Henter input fra views form og gemmer dem i variabler
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
 

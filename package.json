@@ -2,14 +2,18 @@
   "name": "singapore",
   "version": "1.0.0",
   "description": "PostgreSQL One Click Installer README =====================================",
-  "main": "Server/insertSession.js",
+  "main": "models/insertSession.js",
   "dependencies": {
     "bcrypt": "^4.0.1",
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "cookie-session": "^1.4.0",
     "ejs": "^3.1.2",
     "express": "^4.17.1",
     "path": "^0.12.7",
-    "pg": "^8.0.0"
+    "pg": "^8.0.0",
+    "reload": "^3.0.4"
   },
   "devDependencies": {},
   "scripts": {
