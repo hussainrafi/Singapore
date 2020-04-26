@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css"  href="../public/CSS/adminIndex.css">
-    <script src="../public/JavaScript/Classes/Tools.js" ></script>
-    <script src="../public/JavaScript/Classes/Session.js" ></script>
-    <script src="../public/JavaScript/Classes/User.js" ></script>
+    <link rel="stylesheet" type="text/css"  href="../CSS/adminIndex.css">
     <meta charset="UTF-8">
     <title>Mine sessioner</title>
 </head>
 <body>
 <header>
-    <img class="logo" src="../public/pictures/logo1.png" alt="logo" id="logo">
+    <img class="logo" src="../pictures/logo1.png" alt="logo" id="logo">
     <nav>
         <ul class="navbar">
-            <li><a href="studentHjem.ejs">Hjem</a></li>
-            <li><a href="mineSessionsStudent.ejs">Mine sessioner</a> </li>
+            <li><a href="studentHjem">Hjem</a></li>
+            <li><a href="mineSessionsStudent">Mine sessioner</a> </li>
             <li><a href="#">Faciliteter</a> </li>
             <li><a href="#">Min profil</a> </li>
             <li><a href="#">Om os</a> </li>
         </ul>
     </nav>
-    <a class="logout" href="homeIndex.ejs"><button onclick="Tools.logOut()">Log ud</button></a>
+    <a class="logout" href="mainpage.html"><button onclick="">Log ud</button></a>
 </header>
 
 <div id="userSessions"> </div>
 
-<script>
-    document.querySelector("#userSessions")
-        .appendChild(Tools.checkSessions());
-</script>
+
 
 </body>
 </html>

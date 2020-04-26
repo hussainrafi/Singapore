@@ -7,7 +7,8 @@ const app = express();
 const ejs = require('ejs');
 const cookieSession = require('cookie-session');
 const bcryptjs = require('bcryptjs');
-const homeController = require('./Controllers/homeController')
+const homeController = require('./Controllers/indexController')
+const sessionController = require('./Controllers/sessionController')
 
 const bodyParser = require('body-parser');
 

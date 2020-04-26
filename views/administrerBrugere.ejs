@@ -1,86 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css"  href="../public/CSS/adminIndex.css">
+    <link rel="stylesheet" type="text/css"  href="../CSS/adminIndex.css">
     <title>Opret ny bruger</title>
-    <script src="../public/JavaScript/Classes/Tools.js" charset="UTF-8"></script>
-    <script src="../public/JavaScript/Classes/Session.js"></script>
-    <script src="../public/JavaScript/Classes/Facility.js" ></script>
-    <script src="../public/JavaScript/Classes/User.js" charset="UTF-8"></script>
-    <script src="../public/JavaScript/HTMLSpecificFunctions/newUser.js"></script>
-
 </head>
 <body>
-    <header>
-        <img class="logo" src="../public/pictures/logo1.png" alt="logo" id="logo">
+<header>
+    <img class="logo" src="../pictures/logo1.png" alt="logo" id="logo">
 
-        <nav>
-            <ul class="navbar">
-                <li><a href="adminHjem.ejs">Hjem</a></li>
-                <li><a href="mineSessionsAdmin.ejs">Mine sessioner</a> </li>
-                <li><a href="opretSession.ejs">Opret session</a> </li>
-                <li><a href="administrerBrugere.ejs">Administrer brugere</a> </li>
-                <li><a href="#">Faciliteter</a> </li>
-                <li><a href="#">Min profil</a> </li>
-                <li><a href="#">Om os</a> </li>
-            </ul>
-        </nav>
-        <a class="logout" href="homeIndex.ejs"><button onclick="Tools.logOut()">Log ud</button></a>
-    </header>
-    <div class="container" id="container">
-        <div class="form-container" id="form-container">
-            <div class="logo"></div>
+    <nav>
+        <ul class="navbar">
+            <li><a href="adminHjem">Hjem</a></li>
+            <li><a href="mineSessionsAdmin">Mine sessioner</a> </li>
+            <li><a href="opretSession">Opret session</a> </li>
+            <li><a href="administrerBrugere">Administrer brugere</a> </li>
+            <li><a href="#">Faciliteter</a> </li>
+            <li><a href="#">Min profil</a> </li>
+            <li><a href="#">Om os</a> </li>
+        </ul>
+    </nav>
+    <a class="logout" href="mainPage"><button>Log ud</button></a>
+</header>
+<div class="container" id="container">
+    <div class="form-container" id="form-container">
+        <div class="logo"></div>
         <!-- Opretter ny bruger -->
-                <form class="newUser" id="nyForm">
-                    <h2 style="font-size:larger">Opret ny bruger</h2>
-                    <br>
-                    <input id= "newFirstName" type="text" placeholder="Fornavn"/>
-                    <br/>
-                    <input id= "newLastName" type="text" placeholder="Efternavn"/>
-                    <br/>
-                    <input id= "newUserName" type="text" placeholder="Brugernavn"/>
-                    <br/>
-                    <input id="newPassword" type="password" placeholder="Adgangskode"/>
-                    <br/>
-                    <h4 style="font-weight: bold"> Brugertype </h4>
-                    <input type="checkbox" class="userType" value="Coach"/> <label style="font-size: small">Administrator?</label>
-                    <br/>
-                    <br>
-                    Check fodbold-niveau af, hvis eleven er starter til fodbold:
-                    <br>
-                    <input type="radio" class="sportLevel" name="fodbold" value="Fodbold 1. hold"> 1. hold
-                    <br>
-                    <input type="radio" class="sportLevel" name="fodbold" value="Fodbold 2. hold"> 2. hold
-                    <br>
-                    <input type="radio" class="sportLevel" name="fodbold" value="Fodbold 3. hold"> 3. hold
-                    <br>
-                    Check springgymnastik-niveau af, hvis eleven er starter til springgymnastik:
-                    <br>
-                    <input type="radio" class="sportLevel" name="springgymnastik" value="Springgymnastik 1. hold"> 1. hold
-                    <br>
-                    <input type="radio" class="sportLevel" name="springgymnastik" value="Springgymnastik 2. hold"> 2. hold
-                    <br>
-                    <input type="radio" class="sportLevel" name="springgymnastik" value="Springgymnastik 3. hold"> 3. hold
-                    <br>
-                    Check tennis-niveau af, hvis eleven er starter til tennis:
-                    <br>
-                    <input type="radio" class="sportLevel" name="tennis" value="Tennis 1. hold"> 1. hold
-                    <br>
-                    <input type="radio" class="sportLevel" name="tennis" value="Tennis 2. hold"> 2. hold
-                    <br>
-                    <input type="radio" class="sportLevel" name="tennis" value="Tennis 3. hold"> 3. hold
-                    <br>
-                    <button type="button" id="newUserButton" onclick="newUser()">Opret</button>
-                </form>
-        </div>
+        <form class="newUser" id="nyForm">
+            <h2 style="font-size:larger">Opret ny bruger</h2>
+            <br>
+            <input id= "newFirstName" type="text" placeholder="Fornavn"/>
+            <br/>
+            <input id= "newLastName" type="text" placeholder="Efternavn"/>
+            <br/>
+            <input id= "newUserName" type="text" placeholder="Brugernavn"/>
+            <br/>
+            <input id="newPassword" type="password" placeholder="Adgangskode"/>
+            <br/>
+            <h4 style="font-weight: bold"> Brugertype </h4>
+            <input type="checkbox" class="userType" value="Coach"/> <label style="font-size: small">Administrator?</label>
+            <br/>
+            <br>
+            Check fodbold-niveau af, hvis eleven er starter til fodbold:
+            <br>
+            <input type="radio" class="sportLevel" name="fodbold" value="Fodbold 1. hold"> 1. hold
+            <br>
+            <input type="radio" class="sportLevel" name="fodbold" value="Fodbold 2. hold"> 2. hold
+            <br>
+            <input type="radio" class="sportLevel" name="fodbold" value="Fodbold 3. hold"> 3. hold
+            <br>
+            Check springgymnastik-niveau af, hvis eleven er starter til springgymnastik:
+            <br>
+            <input type="radio" class="sportLevel" name="springgymnastik" value="Springgymnastik 1. hold"> 1. hold
+            <br>
+            <input type="radio" class="sportLevel" name="springgymnastik" value="Springgymnastik 2. hold"> 2. hold
+            <br>
+            <input type="radio" class="sportLevel" name="springgymnastik" value="Springgymnastik 3. hold"> 3. hold
+            <br>
+            Check tennis-niveau af, hvis eleven er starter til tennis:
+            <br>
+            <input type="radio" class="sportLevel" name="tennis" value="Tennis 1. hold"> 1. hold
+            <br>
+            <input type="radio" class="sportLevel" name="tennis" value="Tennis 2. hold"> 2. hold
+            <br>
+            <input type="radio" class="sportLevel" name="tennis" value="Tennis 3. hold"> 3. hold
+            <br>
+            <button type="button" id="newUserButton" onclick="newUser()">Opret</button>
+        </form>
     </div>
+</div>
 
-    <div id="coachStudents"></div>
+<div id="coachStudents"></div>
 
-    <script>
-        document.querySelector("#coachStudents")
-            .appendChild(Tools.deleteUser());
-    </script>
+<script>
+</script>
 </body>
 
 </html>

@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="../public/CSS/adminHjemSide.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/adminHjemSide.css">
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="../public/JavaScript/Classes/Tools.js"></script>
-    <script src="../public/JavaScript/Classes/User.js" charset="UTF-8" ></script>
 </head>
 <body>
 <header>
-    <img class="logo" src="../public/pictures/logo1.png" alt="logo" id="logo">
+    <img class="logo" src="../pictures/logo1.png" alt="logo" id="logo">
     <nav>
         <ul class="navbar">
-            <li><a href="adminHjem.ejs">Hjem</a></li>
-            <li><a href="mineSessionsAdmin.ejs">Mine sessioner</a> </li>
-            <li><a href="opretSession.ejs">Opret session</a> </li>
-            <li><a href="administrerBrugere.ejs">Administrer brugere</a> </li>
+            <li><a href="adminHjem">Hjem</a></li>
+            <li><a href="mineSessionsAdmin">Mine sessioner</a> </li>
+            <li><a href="opretSession">Opret session</a> </li>
+            <li><a href="administrerBrugere">Administrer brugere</a> </li>
             <li><a href="#">Faciliteter</a> </li>
             <li><a href="#">Min profil</a> </li>
             <li><a href="#">Om os</a> </li>
         </ul>
     </nav>
-    <a class="logout" href="homeIndex.ejs"><button onclick="Tools.logOut()">Log ud</button></a>
+    <a class="logout" href="mainPage"><button>Log ud</button></a>
 </header>
 <div class="welcomeBox" id="welcomeBox">
     <h2>Velkommen </h2> <h2 id="firstName"></h2>
     <div class="mainSlide">
-    <img src="/public/pictures/hal1.jpg">
+        <img src="/pictures/hal1.jpg">
 
     </div>
     <p>Velkommen til Doofenschmirtz sportsfaciliteter, hvor du kan administrer alle dine sessions og danne overblik over dine holdtilmeldinger.</p>
